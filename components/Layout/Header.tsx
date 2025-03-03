@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import {
   FaBook,
@@ -38,7 +38,7 @@ function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   const router = useRouter();
-  // const pathName = usePathname();
+  const pathName = usePathname();
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -136,19 +136,23 @@ function Header() {
                 ? `/#${sectionId}`
                 : menu.name;
 
-            // const itemPath = `/${formattedItem(linkHref)}`;
-            // const isActive = pathName.startsWith(itemPath);
+            const itemPath = formattedItem(
+              menu.name.toLowerCase() === "home"
+                ? "/"
+                : `/${menu.name.toLowerCase()}`
+            );
 
-            //   ${
-            //   isActive ? "border-[#185397]" : "border-transparent"
-            // }
+            const isActive =
+              itemPath === "/"
+                ? pathName === "/"
+                : pathName.startsWith(itemPath) && itemPath !== "/";
 
             return (
               <li
                 key={menu.name}
-                className={`
-             
-                p-2 lg:py-0 lg:px-2.5 border-l hover:border-[#185397]`}
+                className={` ${
+                  isActive ? "border-[#185397]" : "border-transparent"
+                } p-2 md:py-0 md:px-1 lg:px-1.5 md:mx-1 border-l-2 hover:border-[#185397]`}
               >
                 <Link
                   href={formattedItem(linkHref.toLowerCase())}

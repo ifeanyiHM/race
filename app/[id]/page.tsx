@@ -1,8 +1,8 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, useParams } from "next/navigation";
 import { capitalizeWord, formattedItem } from "../../utils/FormatString";
-import { albertSans } from "../layout";
 
 interface CourseDataProps {
   faculty: string;
@@ -52,15 +52,10 @@ const data: CourseDataProps[] = [
   },
 ];
 
-interface PageProps {
-  params: {
-    id: string;
-  };
-}
-
-function page({ params }: PageProps) {
+function Page() {
+  const params = useParams();
   const courseData = data.find(
-    (item) => formattedItem(item.faculty) === params.id
+    (item) => formattedItem(item.faculty) === (params.id as string)
   );
 
   if (!courseData) {
@@ -80,7 +75,7 @@ function page({ params }: PageProps) {
           >
             <div className="w-full xl:w-auto absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
               <h1
-                className={`${albertSans.className} text-xl md:text-3xl lg:text-5xl min-[1440px]:text-6xl font-bold`}
+                className={`text-xl md:text-3xl lg:text-5xl min-[1440px]:text-6xl font-bold`}
               >
                 {capitalizeWord(courseData.faculty)}
               </h1>
@@ -138,4 +133,4 @@ function page({ params }: PageProps) {
   );
 }
 
-export default page;
+export default Page;
