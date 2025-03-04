@@ -148,12 +148,7 @@ function Header() {
                 : pathName.startsWith(itemPath) && itemPath !== "/";
 
             return (
-              <li
-                key={menu.name}
-                className={` ${
-                  isActive ? "border-[#185397]" : "border-transparent"
-                } p-2 md:py-0 md:px-1 lg:px-1.5 md:mx-1 border-l-2 hover:border-[#185397]`}
-              >
+              <li key={menu.name} className={``}>
                 <Link
                   href={formattedItem(linkHref.toLowerCase())}
                   onClick={(e) => {
@@ -166,7 +161,9 @@ function Header() {
                       }
                     }
                   }}
-                  className="font-bold text-[#185397] text-sm lg:text-base"
+                  className={`${
+                    isActive ? "border-[#185397]" : "border-transparent"
+                  } p-2 md:py-0 md:px-1 lg:px-1.5 md:mx-1 border-l-2 hover:border-[#185397] font-bold text-[#185397] text-sm lg:text-base`}
                 >
                   {menu.name}
                 </Link>
