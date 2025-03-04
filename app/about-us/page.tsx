@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { albertSans } from "../layout";
+import { albertSans } from "../font";
 function page() {
   return (
     <div>
