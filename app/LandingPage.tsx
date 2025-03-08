@@ -38,7 +38,7 @@ function LandingPage() {
     <div>
       {/* Hero section */}
       {/* <div className="relative pt-[60%] md:pt-[45%] w-full bg-[url('/hero-image.svg')] bg-fixed bg-cover bg-center"> */}
-      <div className="relative pt-[60%] md:pt-[45%] w-full">
+      <div className="relative pt-[60%] md:pt-[45%] w-full bg-black">
         <BlurImage
           src={heroImage}
           alt="Hero Background"
