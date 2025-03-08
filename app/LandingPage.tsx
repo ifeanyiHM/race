@@ -1,6 +1,8 @@
+import heroImage from "@/public/hero-image.svg";
 import Image from "next/image";
 import Link from "next/link";
 import { LiaLongArrowAltRightSolid } from "react-icons/lia";
+import BlurImage from "../components/BlurImage";
 import SwiperSlider from "../components/carousel/SwiperSlider";
 import { formattedItem } from "../utils/FormatString";
 
@@ -35,7 +37,23 @@ function LandingPage() {
   return (
     <div>
       {/* Hero section */}
-      <div className="relative pt-[60%] md:pt-[45%] w-full bg-[url('/hero-image.svg')] bg-fixed bg-cover bg-center">
+      {/* <div className="relative pt-[60%] md:pt-[45%] w-full bg-[url('/hero-image.svg')] bg-fixed bg-cover bg-center"> */}
+      <div className="relative pt-[60%] md:pt-[45%] w-full">
+        <BlurImage
+          src={heroImage}
+          alt="Hero Background"
+          classname="object-cover"
+          fill={true}
+        />
+        {/* <Image
+          src="/hero-image.svg"
+          alt="Hero Background"
+          fill
+          className="object-cover"
+          placeholder="blur"
+          // blurDataURL="/hero-image-blur.svg" // Low-quality blurred image
+          priority // Ensures the image loads as early as possible 
+        />*/}
         <div className="w-full xl:w-auto absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
           <h1 className="w-[70%] md:w-[55%] xl:w-auto mx-auto text-xl md:text-3xl lg:text-5xl min-[1440px]:text-6xl font-bold">
             We are your <span className="text-[#3A96FF]">Gateway</span> to{" "}

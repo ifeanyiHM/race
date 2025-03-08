@@ -1,7 +1,7 @@
 "use client";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound, useParams } from "next/navigation";
+import BlurImage from "../../components/BlurImage";
 import { capitalizeWord, formattedItem } from "../../utils/FormatString";
 
 interface CourseDataProps {
@@ -85,7 +85,15 @@ function Page() {
             <ul className="grid grid-cols-2 md:grid-cols-3 gap-1.5 md:gap-3 py-14 md:py-28">
               {courseData.courses.map((course, index) => (
                 <li key={index} className="relative">
-                  <Image
+                  {/* <Image
+                    src={`/${courseData.faculty}/${courseData.faculty}${
+                      index + 1
+                    }.svg`}
+                    alt={course}
+                    width={358}
+                    height={345}
+                  /> */}
+                  <BlurImage
                     src={`/${courseData.faculty}/${courseData.faculty}${
                       index + 1
                     }.svg`}
