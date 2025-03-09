@@ -1,8 +1,6 @@
-import heroImage from "@/public/hero-image.svg";
 import Image from "next/image";
 import Link from "next/link";
 import { LiaLongArrowAltRightSolid } from "react-icons/lia";
-import BlurImage from "../components/BlurImage";
 import SwiperSlider from "../components/carousel/SwiperSlider";
 import { formattedItem } from "../utils/FormatString";
 
@@ -37,23 +35,14 @@ function LandingPage() {
   return (
     <div>
       {/* Hero section */}
-      {/* <div className="relative pt-[60%] md:pt-[45%] w-full bg-[url('/hero-image.svg')] bg-fixed bg-cover bg-center"> */}
-      <div className="relative pt-[60%] md:pt-[45%] w-full bg-black">
-        <BlurImage
-          src={heroImage}
-          alt="Hero Background"
-          classname="object-cover"
-          fill={true}
-        />
-        {/* <Image
-          src="/hero-image.svg"
-          alt="Hero Background"
-          fill
-          className="object-cover"
-          placeholder="blur"
-          // blurDataURL="/hero-image-blur.svg" // Low-quality blurred image
-          priority // Ensures the image loads as early as possible 
-        />*/}
+      <div
+        className="relative pt-[60%] md:pt-[45%] w-full bg-fixed bg-cover bg-center"
+        style={{
+          backgroundImage:
+            "url('/hero-image.png'), linear-gradient(to right, #3b2f2f, #151515, #0d0f0d)",
+          backdropFilter: "blur(50px)",
+        }}
+      >
         <div className="w-full xl:w-auto absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
           <h1 className="w-[70%] md:w-[55%] xl:w-auto mx-auto text-xl md:text-3xl lg:text-5xl min-[1440px]:text-6xl font-bold">
             We are your <span className="text-[#3A96FF]">Gateway</span> to{" "}
@@ -95,7 +84,7 @@ function LandingPage() {
               key={name}
               className={`${
                 index === 4 ? "col-span-2 mx-auto w-1/2" : ""
-              }  rounded-lg md:rounded-3xl p-3 md:py-6 md:px-10  min-[1500px]:px-[2.75rem]`}
+              }  rounded-md md:rounded-2xl p-3 md:py-6 md:px-10  min-[1500px]:px-[2.75rem]`}
               style={{ backgroundColor: color }}
             >
               <Link
@@ -134,15 +123,15 @@ function LandingPage() {
             <li key={country} className="space-y-3 text-center">
               <Link href={country.toLowerCase()}>
                 {" "}
-                <div className="relative overflow-hidden group rounded-[32px]">
+                <div className="relative overflow-hidden group rounded-md md:rounded-xl lg:rounded-2xl">
                   <Image
-                    src={`/countries${index + 1}.svg`}
+                    src={`/country${index + 1}.svg`}
                     alt={country}
                     width={550}
                     height={376}
                     className="shadow-[inset_25px_35px_35px_rgba(0,0,0,0.5)]"
                   />
-                  <div className="absolute inset-0 group-hover:shadow-[inset_0_25px_35px_rgba(0,0,0,0.2)] rounded-[32px]"></div>
+                  <div className="absolute inset-0 group-hover:shadow-[inset_0_25px_35px_rgba(0,0,0,0.2)] rounded-md md:rounded-xl lg:rounded-2xl"></div>
                 </div>
                 <p className="text-sm md:text-base lg:text-2xl font-bold">
                   Study in {country}
@@ -173,7 +162,7 @@ function LandingPage() {
             <li key={program.course} className="space-y-3 text-center">
               <Link href={formattedItem(program.course)}>
                 <div
-                  className="list-item p-[4.188rem] rounded-full"
+                  className="list-item p-5 md:p-8 lg:p-10 xl:p-14 rounded-full"
                   style={{ backgroundColor: program.color }}
                 >
                   <Image

@@ -131,7 +131,7 @@ function Page() {
                         alt={p.university}
                         width={0}
                         height={0}
-                        sizes="100vw"
+                        // sizes="100vw"
                         className="w-auto h-auto max-h-[3.75rem] object-contain"
                       />
                     </div>

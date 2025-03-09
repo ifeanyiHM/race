@@ -5,7 +5,14 @@ function page() {
   return (
     <div>
       {" "}
-      <div className="relative pt-[47%] md:pt-[25%] w-full bg-[url('/usa.svg')] bg-fixed bg-cover bg-center md:bg-[left]">
+      <div
+        className="relative pt-[47%] md:pt-[25%] w-full bg-fixed bg-cover bg-center md:bg-[left]"
+        style={{
+          backgroundImage:
+            "url('/usa.svg'), linear-gradient(to right, #3b2f2f, #151515, #0d0f0d)",
+          backdropFilter: "blur(50px)",
+        }}
+      >
         <div className="w-full xl:w-auto absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
           {/* <h1
             className={`${albertSans.className} text-xl md:text-3xl lg:text-5xl min-[1440px]:text-6xl font-bold`}
