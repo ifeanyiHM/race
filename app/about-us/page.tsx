@@ -1,10 +1,16 @@
-import Image from "next/image";
+import BlurImage from "../../components/BlurImage";
 import { albertSans } from "../font";
 function page() {
   return (
     <div>
       {" "}
-      <div className="relative pt-[47%] md:pt-[25%] w-full bg-[url('/about-us.svg')] bg-fixed bg-cover bg-center md:bg-[left]">
+      <div className="relative pt-[47%] md:pt-[25%] w-full bg-fixed bg-cover bg-center md:bg-[left]">
+        <BlurImage
+          src={`/about-us.png`}
+          alt="about us hero background"
+          fill
+          classname="object-cover"
+        />
         <div className="w-full xl:w-auto absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
           <h1
             className={`${albertSans.className} text-xl md:text-3xl lg:text-5xl min-[1440px]:text-6xl font-bold`}
@@ -17,28 +23,25 @@ function page() {
         <div className="md:flex gap-8 items-center pt-14 pb-20">
           <div className="hidden md:flex gap-2 lg:gap-5 w-1/2 items-center">
             <div className="">
-              <Image
-                src={`/about1.svg`}
+              <BlurImage
+                src={`/about1.png`}
                 alt="about us"
                 width={358}
                 height={548}
-                className=""
               />
             </div>
             <div className="flex flex-col gap-2 lg:gap-6">
-              <Image
-                src={`/about2.svg`}
+              <BlurImage
+                src={`/about2.png`}
                 alt="about us"
                 width={262}
                 height={257}
-                className=""
               />
-              <Image
-                src={`/about3.svg`}
+              <BlurImage
+                src={`/about3.png`}
                 alt="about us"
                 width={262}
                 height={257}
-                className=""
               />
             </div>
           </div>
@@ -62,12 +65,11 @@ function page() {
         <div className="flex flex-col md:flex-row-reverse gap-8 items-center py-0 md:py-14">
           <div className="md:w-1/2">
             <div className="">
-              <Image
-                src={`/mission.svg`}
+              <BlurImage
+                src={`/mission.png`}
                 alt="about us"
                 width={552}
                 height={463}
-                className=""
               />
             </div>
           </div>
@@ -91,12 +93,11 @@ function page() {
         <div className="md:flex gap-8 items-center py-14">
           <div className="hidden md:block w-1/2">
             <div className="h-[550px] bg-cover flex items-center justify-center overflow-hidden">
-              <Image
-                src={`/values.svg`}
+              <BlurImage
+                src={`/values.png`}
                 alt="about us"
                 width={552}
                 height={686}
-                className=""
               />
             </div>
           </div>
