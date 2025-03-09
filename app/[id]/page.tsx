@@ -69,7 +69,7 @@ function Page() {
           {" "}
           <div
             style={{
-              backgroundImage: `url('/${courseData.faculty}/${courseData.faculty}-head.svg')`,
+              backgroundImage: `url('/${courseData.faculty}/${courseData.faculty}-head.png')`,
             }}
             className="relative pt-[47%] md:pt-[25%] w-full bg-fixed bg-cover bg-center"
           >
@@ -85,18 +85,10 @@ function Page() {
             <ul className="grid grid-cols-2 md:grid-cols-3 gap-1.5 md:gap-3 py-14 md:py-28">
               {courseData.courses.map((course, index) => (
                 <li key={index} className="relative">
-                  {/* <Image
-                    src={`/${courseData.faculty}/${courseData.faculty}${
-                      index + 1
-                    }.svg`}
-                    alt={course}
-                    width={358}
-                    height={345}
-                  /> */}
                   <BlurImage
                     src={`/${courseData.faculty}/${courseData.faculty}${
                       index + 1
-                    }.svg`}
+                    }.png`}
                     alt={course}
                     width={358}
                     height={345}
@@ -118,12 +110,6 @@ function Page() {
 
       {courseData?.courses.length === 0 && (
         <div className="flex flex-col items-center justify-center h-[80vh] text-center px-6 animate-fadeIn">
-          {/* <Image
-          src="/not-found.svg" // Make sure to add an appropriate image in your public folder
-          alt="No courses found"
-          width={300}
-          height={300}
-        /> */}
           <h2 className="text-2xl md:text-4xl font-bold mt-6 text-gray-800">
             No Courses Found
           </h2>

@@ -38,8 +38,7 @@ function LandingPage() {
       <div
         className="relative pt-[60%] md:pt-[45%] w-full bg-fixed bg-cover bg-center"
         style={{
-          backgroundImage:
-            "url('/hero-image.png'), linear-gradient(to right, #3b2f2f, #151515, #0d0f0d)",
+          backgroundImage: "url('/hero-image.png'), url('/hero-blur.png')",
           backdropFilter: "blur(50px)",
         }}
       >
