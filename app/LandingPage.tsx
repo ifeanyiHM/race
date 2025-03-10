@@ -121,8 +121,8 @@ function LandingPage() {
         </h2>
         <ul className="w-[90%] lg:w-[80%] xl:w-[70%] mx-auto mt-6 md:mt-[5.563rem] grid grid-cols-2 gap-3 md:gap-8">
           {countries.map((country, index) => (
-            <li key={country} className="space-y-3 text-center w-full">
-              <Link href={country.toLowerCase()}>
+            <li key={country} className="text-center w-full">
+              <Link href={country.toLowerCase()} className="space-y-3">
                 {" "}
                 <div className="relative overflow-hidden group rounded-md md:rounded-xl lg:rounded-2xl w-full">
                   {/* <Image
@@ -170,7 +170,7 @@ function LandingPage() {
             <li key={program.course} className="space-y-3 text-center">
               <Link href={formattedItem(program.course)}>
                 <div
-                  className="list-item p-5 md:p-8 lg:p-14 xl:p-14 rounded-full"
+                  className="list-item p-5 md:p-10 lg:p-14 xl:p-16 rounded-full"
                   style={{ backgroundColor: program.color }}
                 >
                   <Image
