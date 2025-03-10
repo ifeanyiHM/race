@@ -9,6 +9,7 @@ interface BlurProps {
   width?: number;
   height?: number;
   fill?: boolean;
+  sizes?: string;
 }
 
 export default function BlurImage({
@@ -17,6 +18,7 @@ export default function BlurImage({
   classname,
   width,
   height,
+  sizes,
   fill,
 }: BlurProps) {
   const [blurDataURL, setBlurDataURL] = useState<string | null>(null);
@@ -40,6 +42,7 @@ export default function BlurImage({
       width={width}
       height={height}
       fill={fill}
+      sizes={sizes}
       src={src}
       alt={alt}
       placeholder="blur"

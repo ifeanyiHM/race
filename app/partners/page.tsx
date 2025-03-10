@@ -1,7 +1,7 @@
 "use client";
-import Image from "next/image";
 import { useState } from "react";
 import { BiChevronDown } from "react-icons/bi";
+import BlurImage from "../../components/BlurImage";
 import { formattedItem } from "../../utils/FormatString";
 // import { albertSans } from "../layout";
 
@@ -46,7 +46,12 @@ function Page() {
   return (
     <div>
       {" "}
-      <div className="relative pt-[47%] md:pt-[25%] w-full bg-[url('/partner/partner-head.svg')] bg-fixed bg-cover bg-center">
+      <div className="relative pt-[23%] w-full bg-fixed bg-cover bg-center">
+        <BlurImage
+          src={`/partner/partner-head.png`}
+          alt="partner hero background"
+          fill
+        />
         <div className="w-full xl:w-auto absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
           {/* <h1
             className={`${albertSans.className} text-xl md:text-3xl lg:text-5xl min-[1440px]:text-6xl font-bold`}
@@ -98,7 +103,7 @@ function Page() {
           <div className="flex items-center justify-center min-h-[50vh]">
             <div className="bg-white rounded-2xl p-6 md:p-10 max-w-lg text-center">
               {/* <Image
-                src={`/partner/flag-of-${selectedCountry.toLowerCase()}.svg`}
+                src={`/partner/flag-of-${selectedCountry.toLowerCase()}.png`}
                 alt="No partners available"
                 width={150}
                 height={150}
@@ -126,13 +131,13 @@ function Page() {
                 >
                   <div className="flex items-center gap-2 md:gap-5">
                     <div className="w-[3.75rem] md:w-[7.5rem]">
-                      <Image
-                        src={`/partner/${formattedItem(p.university)}.svg`}
+                      <BlurImage
+                        src={`/partner/${formattedItem(p.university)}.png`}
                         alt={p.university}
                         width={0}
                         height={0}
-                        // sizes="100vw"
-                        className="w-auto h-auto max-h-[3.75rem] object-contain"
+                        sizes="100vw"
+                        classname="w-auto h-auto max-h-[3.75rem] object-contain"
                       />
                     </div>
                     <h3 className="text-sm md:text-lg font-bold">
@@ -141,8 +146,8 @@ function Page() {
                   </div>
 
                   <div className="w-8 h-3.5 md:w-auto md:h-auto">
-                    <Image
-                      src={`/partner/flag-of-${p.country}.svg`}
+                    <BlurImage
+                      src={`/partner/flag-of-${p.country}.png`}
                       alt={p.university}
                       width={51}
                       height={21}
