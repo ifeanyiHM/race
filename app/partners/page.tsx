@@ -46,7 +46,7 @@ function Page() {
   return (
     <div>
       {" "}
-      <div className="relative pt-[23%] w-full bg-fixed bg-cover bg-center">
+      <div className="relative pt-[23%] w-full bg-fixed bg-cover bg-center bg-gradient-to-r from-[#5a3d3d] via-[#222222] to-[#0f1412]">
         <BlurImage
           src={`/partner/partner-head.png`}
           alt="partner hero background"

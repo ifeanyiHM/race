@@ -32,7 +32,7 @@ export default function SwiperSlider({ imageList }: SwiperSliderProps) {
               alt={image}
               width={262}
               height={229}
-              className="mb-5 md:mb-0"
+              className="mb-7"
             />
           </SwiperSlide>
         ))}

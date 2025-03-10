@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { LiaLongArrowAltRightSolid } from "react-icons/lia";
+import BlurImage from "../components/BlurImage";
 import SwiperSlider from "../components/carousel/SwiperSlider";
 import { formattedItem } from "../utils/FormatString";
 
@@ -38,7 +39,8 @@ function LandingPage() {
       <div
         className="relative pt-[60%] md:pt-[45%] w-full bg-fixed bg-cover bg-center"
         style={{
-          backgroundImage: "url('/hero-image.png'), url('/hero-blur.png')",
+          backgroundImage:
+            "url('/hero-image.png'), url('/hero-blur.png'), linear-gradient(to right, #5a3d3d, #222222, #0f1412)",
           backdropFilter: "blur(50px)",
         }}
       >
@@ -77,13 +79,13 @@ function LandingPage() {
         <h2 className="text-2xl md:text-4xl text-center font-bold text-[#185397]">
           Our Services
         </h2>
-        <ul className="w-[90%] lg:w-[80%] xl:w-[70%] mx-auto mt-6 md:mt-[5.563rem] grid grid-cols-2 gap-3 md:gap-8">
+        <ul className="w-[90%] lg:w-[70%] xl:w-[70%] mx-auto mt-6 md:mt-[5.563rem] grid grid-cols-2 gap-3 md:gap-8">
           {services.map(({ name, color }, index) => (
             <li
               key={name}
               className={`${
                 index === 4 ? "col-span-2 mx-auto w-1/2" : ""
-              }  rounded-md md:rounded-2xl p-3 md:py-6 md:px-10  min-[1500px]:px-[2.75rem]`}
+              }  rounded-md md:rounded-2xl p-3 md:py-6 md:px-10 min-[1500px]:px-[2.75rem]`}
               style={{ backgroundColor: color }}
             >
               <Link
@@ -119,16 +121,23 @@ function LandingPage() {
         </h2>
         <ul className="w-[90%] lg:w-[80%] xl:w-[70%] mx-auto mt-6 md:mt-[5.563rem] grid grid-cols-2 gap-3 md:gap-8">
           {countries.map((country, index) => (
-            <li key={country} className="space-y-3 text-center">
+            <li key={country} className="space-y-3 text-center w-full">
               <Link href={country.toLowerCase()}>
                 {" "}
-                <div className="relative overflow-hidden group rounded-md md:rounded-xl lg:rounded-2xl">
-                  <Image
-                    src={`/country${index + 1}.svg`}
+                <div className="relative overflow-hidden group rounded-md md:rounded-xl lg:rounded-2xl w-full">
+                  {/* <Image
+                    src={`/country${index + 1}.png`}
                     alt={country}
                     width={550}
                     height={376}
-                    className="shadow-[inset_25px_35px_35px_rgba(0,0,0,0.5)]"
+                    className="shadow-[inset_25px_35px_35px_rgba(0,0,0,0.5)] w-full"
+                  /> */}
+                  <BlurImage
+                    src={`/country${index + 1}.png`}
+                    alt={country}
+                    width={550}
+                    height={376}
+                    classname="shadow-[inset_25px_35px_35px_rgba(0,0,0,0.5)] w-full"
                   />
                   <div className="absolute inset-0 group-hover:shadow-[inset_0_25px_35px_rgba(0,0,0,0.2)] rounded-md md:rounded-xl lg:rounded-2xl"></div>
                 </div>
@@ -161,7 +170,7 @@ function LandingPage() {
             <li key={program.course} className="space-y-3 text-center">
               <Link href={formattedItem(program.course)}>
                 <div
-                  className="list-item p-5 md:p-8 lg:p-10 xl:p-14 rounded-full"
+                  className="list-item p-5 md:p-8 lg:p-14 xl:p-14 rounded-full"
                   style={{ backgroundColor: program.color }}
                 >
                   <Image

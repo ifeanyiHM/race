@@ -4,7 +4,7 @@ function page() {
   return (
     <div>
       {" "}
-      <div className="relative pt-[47%] md:pt-[25%] w-full bg-fixed bg-cover bg-center md:bg-[left]">
+      <div className="relative pt-[47%] md:pt-[25%] w-full bg-fixed bg-cover bg-center md:bg-[left] bg-gradient-to-r from-[#5a3d3d] via-[#222222] to-[#0f1412]">
         <BlurImage
           src={`/about-us.png`}
           alt="about us hero background"

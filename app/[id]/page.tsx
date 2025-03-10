@@ -68,11 +68,17 @@ function Page() {
         <div>
           {" "}
           <div
-            style={{
-              backgroundImage: `url('/${courseData.faculty}/${courseData.faculty}-head.png')`,
-            }}
-            className="relative pt-[47%] md:pt-[25%] w-full bg-fixed bg-cover bg-center"
+            // style={{
+            //   backgroundImage: `url('/${courseData.faculty}/${courseData.faculty}-head.png')`,
+            // }}
+            className="relative pt-[47%] md:pt-[25%] w-full bg-fixed bg-cover bg-center bg-gradient-to-r from-[#5a3d3d] via-[#222222] to-[#0f1412]"
           >
+            <BlurImage
+              src={`/${courseData.faculty}/${courseData.faculty}-head.png`}
+              alt={`${courseData.faculty} hero background`}
+              fill
+              classname="object-cover"
+            />
             <div className="w-full xl:w-auto absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
               <h1
                 className={`text-xl md:text-3xl lg:text-5xl min-[1440px]:text-6xl font-bold`}
