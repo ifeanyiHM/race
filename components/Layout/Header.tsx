@@ -82,7 +82,9 @@ function Header() {
           {menuList.map(({ name, icon }, index) => {
             const sectionId = name.toLowerCase();
             const isInternalScroll =
-              sectionId === "programs" || sectionId === "services";
+              sectionId === "programs" ||
+              sectionId === "services" ||
+              sectionId === "study destinations";
             const linkHref =
               sectionId === "home"
                 ? "/"
@@ -128,7 +130,9 @@ function Header() {
           {menuList.map((menu) => {
             const sectionId = menu.name.toLowerCase();
             const isInternalScroll =
-              sectionId === "programs" || sectionId === "services";
+              sectionId === "programs" ||
+              sectionId === "services" ||
+              sectionId === "study destinations";
             const linkHref =
               sectionId === "home"
                 ? "/"

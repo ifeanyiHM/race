@@ -36,3 +36,7 @@ countries:hover {
     transform: scaleX(1);
   }
 }
+
+.list:hover {
+  filter: brightness(95%);
+}
