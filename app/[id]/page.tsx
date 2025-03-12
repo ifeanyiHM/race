@@ -30,11 +30,12 @@ const data: CourseDataProps[] = [
       "Communication",
       "Baking and Pastries",
       "Film and Media Production",
-      "Tourism",
+      "Hospitality & Tourism",
       "Law and Justice",
       "Photography",
       "Fashion",
       "Interior Design",
+      "History",
     ],
   },
   {
@@ -48,7 +49,13 @@ const data: CourseDataProps[] = [
   },
   {
     faculty: "health sciences",
-    courses: [],
+    courses: [
+      "Public Health",
+      "Kinesiology",
+      "Environmental Health",
+      "Biology",
+      "Digital Health",
+    ],
   },
 ];
 
@@ -57,6 +64,8 @@ function Page() {
   const courseData = data.find(
     (item) => formattedItem(item.faculty) === (params.id as string)
   );
+
+  const courseImg = courseData && formattedItem(courseData.faculty);
 
   if (!courseData) {
     notFound();
@@ -74,7 +83,7 @@ function Page() {
             className="relative pt-[47%] md:pt-[25%] w-full bg-fixed bg-cover bg-center bg-gradient-to-r from-[#5a3d3d] via-[#222222] to-[#0f1412]"
           >
             <BlurImage
-              src={`/${courseData.faculty}/${courseData.faculty}-head.png`}
+              src={`/${courseImg}/${courseImg}-head.png`}
               alt={`${courseData.faculty} hero background`}
               fill
               classname="object-cover"
@@ -92,9 +101,7 @@ function Page() {
               {courseData.courses.map((course, index) => (
                 <li key={index} className="relative">
                   <BlurImage
-                    src={`/${courseData.faculty}/${courseData.faculty}${
-                      index + 1
-                    }.png`}
+                    src={`/${courseImg}/${courseImg}${index + 1}.png`}
                     alt={course}
                     width={358}
                     height={345}

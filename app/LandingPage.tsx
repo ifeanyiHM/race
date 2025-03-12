@@ -12,8 +12,10 @@ const universityLogo = [
   "university1",
   "university2",
   "university3",
-  "university1",
-  "university2",
+  "university4",
+  "university5",
+  "university6",
+  "university7",
 ];
 
 const services = [
@@ -70,7 +72,7 @@ const services = [
 
 const countries = ["Canada", "UK", "USA", "Ireland"];
 
-const partners = ["partner1", "partner2", "partner3", "partner4", "partner2"];
+const partners = ["partner1", "partner2", "partner3", "partner4", "partner5"];
 
 const programs = [
   { course: "engineering", color: "#FFE3E3" },
@@ -137,10 +139,10 @@ function LandingPage() {
                   onClick={() =>
                     setOpenIndex(openIndex === index ? null : index)
                   }
-                  className="list rounded-md md:rounded-2xl p-3 md:py-6 md:px-10 min-[1500px]:px-[2.75rem] h-full flex"
+                  className="arrow rounded-md md:rounded-2xl p-3 md:py-6 md:px-10 min-[1500px]:px-[2.75rem] h-full flex"
                   style={{ backgroundColor: color }}
                 >
-                  <div className="h-full flex flex-col justify-between gap-10 md:gap-20 lg:gap-28 arrow">
+                  <div className="h-full flex flex-col justify-between gap-10 md:gap-20 lg:gap-28">
                     <div className="space-y-5">
                       <Image
                         src={`/icon/service${index + 1}.svg`}
@@ -163,7 +165,13 @@ function LandingPage() {
                 {openIndex === index && (
                   <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-10">
                     <div className="relative rounded-lg shadow-lg w-[95%] md:w-4/5 xl:w-3/5 max-w-5xl bg-white">
-                      <div className="relative overflow-hidden text-sm md:text-base p-4 md:p-10 rounded-lg shadow-lg w-full text-gray-700">
+                      <div
+                        className={`${
+                          openIndex === 0
+                            ? "max-h-[80vh] md:max-h-full overflow-x-hidden overflow-y-auto md:overflow-hidden"
+                            : "overflow-hidden"
+                        } relative text-sm md:text-base p-4 md:p-10 rounded-lg shadow-lg w-full text-gray-700`}
+                      >
                         <div
                           style={{ backgroundColor: color }}
                           className="absolute -top-10 -left-10 w-28 h-28 rounded-full"
@@ -195,7 +203,9 @@ function LandingPage() {
                         </div>
                         <div
                           style={{ backgroundColor: color }}
-                          className="absolute -bottom-10 -right-10 w-28 h-28 rounded-full"
+                          className={`${
+                            openIndex === 0 ? "hidden md:block" : ""
+                          } absolute -bottom-10 -right-10 w-28 h-28 rounded-full`}
                         ></div>
                       </div>
                       <button

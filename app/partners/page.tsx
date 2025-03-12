@@ -30,17 +30,135 @@ const partner = [
     university: "Arkansas State University",
     country: "usa",
   },
+  {
+    university: "University College Birmingham",
+    country: "uk",
+  },
+  {
+    university: "University of Prince Edward Island",
+    country: "canada",
+  },
+  {
+    university: "University of Arizona",
+    country: "usa",
+  },
+  {
+    university: "Teesside University",
+    country: "uk",
+  },
+  {
+    university: "Windsor University",
+    country: "canada",
+  },
+  {
+    university: "University of Illinois",
+    country: "usa",
+  },
+  {
+    university: "Coventry University",
+    country: "uk",
+  },
+  {
+    university: "Wilfrid Laurier University",
+    country: "canada",
+  },
+  {
+    university: "Sault College",
+    country: "canada",
+  },
+  {
+    university: "Washington State University",
+    country: "usa",
+  },
+  {
+    university: "Leeds Trinity University",
+    country: "uk",
+  },
+
+  {
+    university: "University Of Saskatchewan",
+    country: "canada",
+  },
+  {
+    university: "Centennial College",
+    country: "canada",
+  },
+  {
+    university: "Louisiana State University",
+    country: "usa",
+  },
+  {
+    university: "University of Guelph",
+    country: "canada",
+  },
+  {
+    university: "Murray State University",
+    country: "usa",
+  },
+  {
+    university: "Algonquin College",
+    country: "canada",
+  },
+  {
+    university: "University Of Lethbridge",
+    country: "canada",
+  },
+  {
+    university: "Thompson Rivers University",
+    country: "canada",
+  },
+  {
+    university: "Humber College",
+    country: "canada",
+  },
+  {
+    university: "Florida International University",
+    country: "usa",
+  },
+  {
+    university: "University of Manitoba",
+    country: "canada",
+  },
+  {
+    university: "Trine University",
+    country: "usa",
+  },
+  {
+    university: "Fleming College",
+    country: "canada",
+  },
+  {
+    university: "Kent State University",
+    country: "usa",
+  },
+  {
+    university: "Conestoga College",
+    country: "canada",
+  },
+  {
+    university: "New Brunswick community College",
+    country: "canada",
+  },
 ];
 
 function Page() {
   const [selectedCountry, setSelectedCountry] = useState("Sort by Country");
   const [isOpen, setIsOpen] = useState(false);
+  const [searchQuery, setsearchQuery] = useState("");
 
-  const filteredPartner = partner.filter(
+  const searchedPartner = partner.filter((query) =>
+    query.university.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
+  const filteredPartner = searchedPartner.filter(
     (p) =>
       selectedCountry === "All" ||
       selectedCountry === "Sort by Country" ||
       p.country === selectedCountry.toLocaleLowerCase()
+  );
+
+  const sortedPartner = filteredPartner.sort((a, b) =>
+    a.university.localeCompare(b.university)
   );
 
   return (
@@ -64,42 +182,59 @@ function Page() {
         <div className="flex items-center justify-between">
           <h2 className="text-[#185397] text-xl font-bold">Universities</h2>
 
-          <div className="relative min-w-[9.75rem]">
-            {/* Dropdown Button */}
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="w-full flex justify-between gap-2 items-center bg-gray-300 px-2 py-2 rounded-md text-sm text-gray-800 font-medium cursor-pointer focus:outline-none"
-            >
-              {selectedCountry}
-              <BiChevronDown
-                className={`transform transition-transform duration-200 ${
-                  isOpen ? "rotate-180" : "rotate-0"
-                }`}
-              />
-            </button>
+          <div className="flex items-center gap-4">
+            <input
+              className="hidden md:block w-56 p-2 text-xs outline-none border border-[#185397] rounded-full"
+              type="text"
+              placeholder="search university"
+              value={searchQuery}
+              onChange={(e) => setsearchQuery(e.target.value)}
+            />
 
-            {/* Dropdown List */}
-            {isOpen && (
-              <ul className="absolute w-full mt-2 text-sm text-gray-700 bg-white shadow-xl rounded-md overflow-hidden">
-                {["All", "UK", "USA", "Ireland", "Canada"].map(
-                  (country, index) => (
-                    <li
-                      key={index}
-                      onClick={() => {
-                        setSelectedCountry(country);
-                        setIsOpen(false);
-                      }}
-                      className="px-4 py-1 cursor-pointer hover:bg-gray-200 transition-colors"
-                    >
-                      {country}
-                    </li>
-                  )
-                )}
-              </ul>
-            )}
+            <div className="relative min-w-[9.75rem]">
+              {/* Dropdown Button */}
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="w-full flex justify-between gap-2 items-center bg-gray-300 px-2 py-2 rounded-md text-sm text-gray-800 font-medium cursor-pointer focus:outline-none"
+              >
+                {selectedCountry}
+                <BiChevronDown
+                  className={`transform transition-transform duration-200 ${
+                    isOpen ? "rotate-180" : "rotate-0"
+                  }`}
+                />
+              </button>
+
+              {/* Dropdown List */}
+              {isOpen && (
+                <ul className="absolute w-full mt-2 text-sm text-gray-700 bg-white shadow-xl rounded-md overflow-hidden">
+                  {["All", "UK", "USA", "Ireland", "Canada"].map(
+                    (country, index) => (
+                      <li
+                        key={index}
+                        onClick={() => {
+                          setSelectedCountry(country);
+                          setIsOpen(false);
+                        }}
+                        className="px-4 py-1 cursor-pointer hover:bg-gray-200 transition-colors"
+                      >
+                        {country}
+                      </li>
+                    )
+                  )}
+                </ul>
+              )}
+            </div>
           </div>
         </div>
-        {filteredPartner.length === 0 ? (
+        <input
+          className="md:hidden w-full mt-4 p-2 text-xs outline-none border border-[#185397] rounded-full"
+          type="text"
+          placeholder="search university"
+          value={searchQuery}
+          onChange={(e) => setsearchQuery(e.target.value)}
+        />
+        {sortedPartner.length === 0 ? (
           <div className="flex items-center justify-center min-h-[50vh]">
             <div className="bg-white rounded-2xl p-6 md:p-10 max-w-lg text-center">
               {/* <Image
@@ -124,7 +259,7 @@ function Page() {
         ) : (
           <>
             <ul className="space-y-6 my-5">
-              {filteredPartner.map((p) => (
+              {sortedPartner.map((p) => (
                 <li
                   key={p.university}
                   className="p-2 md:p-4 flex justify-between items-center bg-[#E9E9E9]"
