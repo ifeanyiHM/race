@@ -153,7 +153,7 @@ function Header({ classname }: HeaderProps) {
                         }
                       }
                     }}
-                    className="flex items-center gap-2 font-bold text-[#185397] text-sm lg:text-base xl:text-xl"
+                    className="flex items-center gap-2 font-medium text-[#185397] text-sm lg:text-base xl:text-xl"
                   >
                     <span className="text-lg">{icon}</span>
                     {name}
@@ -205,7 +205,7 @@ function Header({ classname }: HeaderProps) {
                     }}
                     className={`${
                       isActive ? "border-[#185397]" : "border-transparent"
-                    } p-2 md:py-0 md:px-1 lg:px-1.5 md:mx-1 border-l-2 hover:border-[#185397] font-bold text-[#185397] text-sm lg:text-base`}
+                    } p-2 md:py-0 md:px-1 lg:px-1.5 md:mx-1 border-l-2 hover:border-[#185397] font-medium text-[#185397] text-sm lg:text-base`}
                   >
                     {menu.name}
                   </Link>

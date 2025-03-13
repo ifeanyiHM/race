@@ -142,14 +142,18 @@ const partner = [
 ];
 
 function Page() {
-  const [selectedCountry, setSelectedCountry] = useState("Sort by Country");
-  const [isOpen, setIsOpen] = useState(false);
-  const [searchQuery, setsearchQuery] = useState("");
+  const [selectedCountry, setSelectedCountry] =
+    useState<string>("Sort by Country");
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [searchQuery, setsearchQuery] = useState<string>("");
+  const [count, setCount] = useState<number>(10);
 
+  //search features
   const searchedPartner = partner.filter((query) =>
     query.university.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
+  //filtered by country
   const filteredPartner = searchedPartner.filter(
     (p) =>
       selectedCountry === "All" ||
@@ -157,9 +161,15 @@ function Page() {
       p.country === selectedCountry.toLocaleLowerCase()
   );
 
+  //sort alphabetically
   const sortedPartner = filteredPartner.sort((a, b) =>
     a.university.localeCompare(b.university)
   );
+
+  //handle display more universities
+  const handleFindMore = () => {
+    setCount((prev) => prev + 10);
+  };
 
   return (
     <div>
@@ -237,13 +247,6 @@ function Page() {
         {sortedPartner.length === 0 ? (
           <div className="flex items-center justify-center min-h-[50vh]">
             <div className="bg-white rounded-2xl p-6 md:p-10 max-w-lg text-center">
-              {/* <Image
-                src={`/partner/flag-of-${selectedCountry.toLowerCase()}.png`}
-                alt="No partners available"
-                width={150}
-                height={150}
-                className="mx-auto mb-4"
-              /> */}
               <h2 className="text-xl md:text-2xl font-bold text-gray-800">
                 No Partners Listed
               </h2>
@@ -259,7 +262,7 @@ function Page() {
         ) : (
           <>
             <ul className="space-y-6 my-5">
-              {sortedPartner.map((p) => (
+              {sortedPartner.slice(0, count).map((p) => (
                 <li
                   key={p.university}
                   className="p-2 md:p-4 flex justify-between items-center bg-[#E9E9E9]"
@@ -292,10 +295,15 @@ function Page() {
               ))}
             </ul>
             <div className="text-center pb-16 lg:pb-32 mt-10">
-              <button className="w-44 md:w-56 min-[1500px]:w-[21.9rem] text-white py-2 lg:py-3 min-[1500px]:py-[1.125rem] bg-[#185397] rounded-[2rem] font-bold text-xs md:text-sm lg:text-base">
-                Find more schools
-              </button>
-            </div>{" "}
+              {count < sortedPartner.length && (
+                <button
+                  onClick={handleFindMore}
+                  className="w-44 md:w-56 min-[1500px]:w-[21.9rem] text-white py-2 lg:py-3 min-[1500px]:py-[1.125rem] bg-[#185397] rounded-[2rem] font-bold text-xs md:text-sm lg:text-base"
+                >
+                  Find more schools
+                </button>
+              )}
+            </div>
           </>
         )}
       </div>
