@@ -1,10 +1,10 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
+import { BiEnvelope } from "react-icons/bi";
 import { FaFacebookF, FaInstagram, FaPhoneAlt } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { ImLocation } from "react-icons/im";
-import { TfiEmail } from "react-icons/tfi";
 
 interface RequestType {
   name: string;
@@ -111,7 +111,7 @@ function Page() {
                   className="flex items-center gap-3"
                 >
                   <span className="text-[#185397] font-bold text-lg">
-                    <TfiEmail />
+                    <BiEnvelope />
                   </span>
                   <span>info@raceeduconsult.com</span>
                 </Link>
