@@ -3,143 +3,8 @@ import { useState } from "react";
 import { BiChevronDown } from "react-icons/bi";
 import BlurImage from "../../components/BlurImage";
 import { formattedItem } from "../../utils/FormatString";
+import { partner } from "../../utils/constant";
 // import { albertSans } from "../layout";
-
-const partner = [
-  {
-    university: "De Montfort University",
-    country: "uk",
-  },
-  {
-    university: "University of New Brunswick",
-    country: "canada",
-  },
-  {
-    university: "Auburn University",
-    country: "usa",
-  },
-  {
-    university: "University of Hertfordshire",
-    country: "uk",
-  },
-  {
-    university: "Queen’s University",
-    country: "canada",
-  },
-  {
-    university: "Arkansas State University",
-    country: "usa",
-  },
-  {
-    university: "University College Birmingham",
-    country: "uk",
-  },
-  {
-    university: "University of Prince Edward Island",
-    country: "canada",
-  },
-  {
-    university: "University of Arizona",
-    country: "usa",
-  },
-  {
-    university: "Teesside University",
-    country: "uk",
-  },
-  {
-    university: "Windsor University",
-    country: "canada",
-  },
-  {
-    university: "University of Illinois",
-    country: "usa",
-  },
-  {
-    university: "Coventry University",
-    country: "uk",
-  },
-  {
-    university: "Wilfrid Laurier University",
-    country: "canada",
-  },
-  {
-    university: "Sault College",
-    country: "canada",
-  },
-  {
-    university: "Washington State University",
-    country: "usa",
-  },
-  {
-    university: "Leeds Trinity University",
-    country: "uk",
-  },
-
-  {
-    university: "University Of Saskatchewan",
-    country: "canada",
-  },
-  {
-    university: "Centennial College",
-    country: "canada",
-  },
-  {
-    university: "Louisiana State University",
-    country: "usa",
-  },
-  {
-    university: "University of Guelph",
-    country: "canada",
-  },
-  {
-    university: "Murray State University",
-    country: "usa",
-  },
-  {
-    university: "Algonquin College",
-    country: "canada",
-  },
-  {
-    university: "University Of Lethbridge",
-    country: "canada",
-  },
-  {
-    university: "Thompson Rivers University",
-    country: "canada",
-  },
-  {
-    university: "Humber College",
-    country: "canada",
-  },
-  {
-    university: "Florida International University",
-    country: "usa",
-  },
-  {
-    university: "University of Manitoba",
-    country: "canada",
-  },
-  {
-    university: "Trine University",
-    country: "usa",
-  },
-  {
-    university: "Fleming College",
-    country: "canada",
-  },
-  {
-    university: "Kent State University",
-    country: "usa",
-  },
-  {
-    university: "Conestoga College",
-    country: "canada",
-  },
-  {
-    university: "New Brunswick community College",
-    country: "canada",
-  },
-];
 
 function Page() {
   const [selectedCountry, setSelectedCountry] =
@@ -194,7 +59,7 @@ function Page() {
 
           <div className="flex items-center gap-4">
             <input
-              className="hidden md:block w-56 p-2 text-xs outline-none border border-[#185397] rounded-full"
+              className="hidden md:block placeholder-[#333333] w-56 p-2 text-xs outline-none border border-gray-400 rounded-full"
               type="text"
               placeholder="search university"
               value={searchQuery}
@@ -205,7 +70,7 @@ function Page() {
               {/* Dropdown Button */}
               <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="w-full flex justify-between gap-2 items-center bg-gray-300 px-2 py-2 rounded-md text-sm text-gray-800 font-medium cursor-pointer focus:outline-none"
+                className="w-full flex justify-between gap-2 items-center bg-gray-300 px-2 py-2 rounded-md text-sm text-[#333333] font-medium cursor-pointer focus:outline-none"
               >
                 {selectedCountry}
                 <BiChevronDown
@@ -238,7 +103,7 @@ function Page() {
           </div>
         </div>
         <input
-          className="md:hidden w-full mt-4 p-2 text-xs outline-none border border-[#185397] rounded-full"
+          className="md:hidden placeholder-[#333333] w-full mt-4 p-2 text-xs outline-none border border-gray-400 rounded-full"
           type="text"
           placeholder="search university"
           value={searchQuery}
@@ -278,7 +143,7 @@ function Page() {
                         classname="w-auto h-auto max-h-[3.75rem] object-contain"
                       />
                     </div>
-                    <h3 className="text-sm md:text-lg font-bold">
+                    <h3 className="text-sm md:text-lg font-bold text-[#333333]">
                       {p.university}
                     </h3>
                   </div>

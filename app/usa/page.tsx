@@ -26,7 +26,7 @@ function page() {
           <h2 className="text-2xl md:text-3xl font-bold text-blue-600 text-center">
             Why Study in USA?
           </h2>
-          <p className="text-gray-700 leading-relaxed font-medium mt-6">
+          <p className="text-[#333333] leading-relaxed font-medium mt-6">
             <span className="text-blue-600 font-bold">The US</span>
             boasts of some of the finest universities, a lot of which
             consistently rank in the world university rankings.  Find yourself
@@ -35,7 +35,7 @@ function page() {
             Post-Study Work Options:  As an international student, you may have
             opportunities to work in the USA after graduation.
           </p>
-          <p className="text-gray-700 leading-relaxed font-medium mt-4">
+          <p className="text-[#333333] leading-relaxed font-medium mt-4">
             <span className="text-blue-600 font-bold">
               Excellent international reputation:
             </span>
@@ -45,14 +45,14 @@ function page() {
             This is due to its high academic standards, well-funded and
             supported American universities.
           </p>
-          <p className="text-gray-700 leading-relaxed font-medium mt-4">
+          <p className="text-[#333333] leading-relaxed font-medium mt-4">
             <span className="text-blue-600 font-bold">Cultural diversity:</span>{" "}
             American universities are bastions of cultural diversity where
             students from every nationality, religion, or ethnicity are, and
             having access to and contact with so many cultural backgrounds and
             this makes your experience that much more thrilling.
           </p>
-          <p className="text-gray-700 leading-relaxed font-medium mt-4">
+          <p className="text-[#333333] leading-relaxed font-medium mt-4">
             <span className="text-blue-600 font-bold">
               Innovative Research Opportunities:
             </span>{" "}

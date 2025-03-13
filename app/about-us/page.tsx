@@ -49,12 +49,12 @@ function page() {
             <h2 className="text-2xl lg:text-3xl font-bold text-blue-600">
               Race Educational Services
             </h2>
-            <p className="text-gray-700 leading-relaxed mt-4">
+            <p className="text-[#333333] leading-relaxed mt-4">
               is an agency that provides individuals with international
               admissions. We provide professional support and advice to those
               who want to study abroad.
             </p>
-            <p className="text-gray-700 leading-relaxed mt-4">
+            <p className="text-[#333333] leading-relaxed mt-4">
               We understand the difficulties that come with the admission
               process and aim to help every student that comes to us for our
               service. Whether it be choosing a course, an institution, starting
@@ -77,13 +77,13 @@ function page() {
             <h2 className="text-2xl md:text-3xl font-bold text-blue-600">
               Our Mission
             </h2>
-            <p className="text-gray-700 leading-relaxed mt-4">
+            <p className="text-[#333333] leading-relaxed mt-4">
               We strive to be the gateway for students worldwide, offering
               expert guidance, support, and resources to help you make informed
               decisions about studying abroad and prepare you for success in
               your chosen careers. 
             </p>
-            <p className="text-gray-700 leading-relaxed mt-4">
+            <p className="text-[#333333] leading-relaxed mt-4">
               To empower the dreams of international students by connecting you
               to higher education institutions that unlock doors to a brighter,
               globally connected future.
@@ -105,12 +105,12 @@ function page() {
             <h2 className="text-2xl md:text-3xl font-bold text-blue-600">
               Our Values
             </h2>
-            <p className="text-gray-700 leading-relaxed mt-4">
+            <p className="text-[#333333] leading-relaxed mt-4">
               We uphold the highest standards of honesty and transparency in all
               our interactions, ensuring that students can trust us to guide
               them on their educational journey.
             </p>
-            <p className="text-gray-700 leading-relaxed mt-4">
+            <p className="text-[#333333] leading-relaxed mt-4">
               To give the best service through professional conduct, attitude
               and behaviour and provide solutions in the most respectful and
               ethical manner We prioritize quality in every aspect of our

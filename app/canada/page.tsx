@@ -25,14 +25,14 @@ function page() {
           <h2 className="text-2xl md:text-3xl font-bold text-blue-600 text-center">
             Why Study in Canada?
           </h2>
-          <p className="text-gray-700 leading-relaxed font-medium mt-6">
+          <p className="text-[#333333] leading-relaxed font-medium mt-6">
             <span className="text-blue-600 font-bold">Canada</span> is one of
             the most sought-after study destinations for students from all over
             the world. It offers some of the best universities in the world, a
             diverse cultural environment, the opportunity to gain work
             experience in your field of study.  
           </p>
-          <p className="text-gray-700 leading-relaxed font-medium mt-4">
+          <p className="text-[#333333] leading-relaxed font-medium mt-4">
             <span className="text-blue-600 font-bold">
               World-class Education:
             </span>
@@ -42,7 +42,7 @@ function page() {
             standards. Obtaining a Canadian degree not only provides you with
             quality education but also opens doors to global opportunities.
           </p>
-          <p className="text-gray-700 leading-relaxed font-medium mt-4">
+          <p className="text-[#333333] leading-relaxed font-medium mt-4">
             <span className="text-blue-600 font-bold">
               Multicultural Society: 
             </span>{" "}
@@ -50,7 +50,7 @@ function page() {
             different cultures and lifestyle. The multicultural environment in
             Canada promotes friendliness and peaceful living.
           </p>
-          <p className="text-gray-700 leading-relaxed font-medium mt-4">
+          <p className="text-[#333333] leading-relaxed font-medium mt-4">
             <span className="text-blue-600 font-bold">
               Immigration opportunities:
             </span>{" "}
@@ -59,7 +59,7 @@ function page() {
             graduation. You can gain some international work experience and
             apply for permanent residency later on.
           </p>
-          <p className="text-gray-700 leading-relaxed font-medium mt-4">
+          <p className="text-[#333333] leading-relaxed font-medium mt-4">
             <span className="text-blue-600 font-bold">Quality of Life:</span>{" "}
             Canada offers a high standard of living. Access to quality
             education, healthcare, basic amenities, and cleaner air and water

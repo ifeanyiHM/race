@@ -6,15 +6,16 @@ import { useEffect, useState } from "react";
 import {
   FaBook,
   FaEnvelope,
+  FaFacebookF,
   FaGlobe,
   FaHandshake,
   FaHome,
   FaInfoCircle,
+  FaInstagram,
   FaServicestack,
 } from "react-icons/fa";
-import { ImLocation } from "react-icons/im";
-import { IoClose, IoMenu, IoPhonePortraitSharp } from "react-icons/io5";
-import { TfiEmail } from "react-icons/tfi";
+import { FaXTwitter } from "react-icons/fa6";
+import { IoClose, IoMenu } from "react-icons/io5";
 import { formattedItem } from "../../utils/FormatString";
 
 const menuList = [
@@ -58,28 +59,44 @@ function Header({ classname }: HeaderProps) {
       <div className={`${classname} w-full bg-[#185397] py-2`}>
         <div className="flex justify-between items-center text-white text-xs md:text-sm font-medium px-2 md:px-0 md:w-[95%] lg:w-[93%] mx-auto">
           <p>
-            Email: ifeanyihm@gmail.com | call: +234 000 0000 000 | +234 000 0000
-            000
+            Email:{" "}
+            <Link href="mailto:info@raceeduconsult.com">
+              info@raceeduconsult.com
+            </Link>{" "}
+            | call: <Link href="tel:+2348092330570">+234 809 2330 570</Link> |{" "}
+            <Link href="tel:+2349038940707">+234 903 8940 707</Link>
           </p>
           <ul className="hidden md:flex items-center gap-1 md:gap-3">
             <li>
-              <Link href="#" className="flex items-center gap-3">
+              <Link
+                href="https://www.instagram.com/raceeduservices1?igsh=dDZ2bTZ1anU2M2Z1"
+                target="_blank"
+                className="flex items-center gap-3"
+              >
                 <span className="font-bold">
-                  <TfiEmail />
+                  <FaInstagram />
                 </span>
               </Link>
             </li>
             <li>
-              <Link href="#" className="flex items-center gap-3">
+              <Link
+                href="https://www.facebook.com/share/WNBrWDJXg8Hso873/"
+                target="_blank"
+                className="flex items-center gap-3"
+              >
                 <span className="font-bold">
-                  <IoPhonePortraitSharp />
+                  <FaFacebookF />
                 </span>
               </Link>
             </li>
             <li>
-              <Link href="#" className="flex items-center gap-3">
+              <Link
+                href="https://x.com/Raceduservices?t=UvnxM6yluN7mFkOhbUzUng&s=09"
+                target="_blank"
+                className="flex items-center gap-3"
+              >
                 <span className="font-bold">
-                  <ImLocation />
+                  <FaXTwitter />
                 </span>
               </Link>
             </li>

@@ -1,8 +1,9 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
+import { FaFacebookF, FaInstagram, FaPhoneAlt } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import { ImLocation } from "react-icons/im";
-import { IoPhonePortraitSharp } from "react-icons/io5";
 import { TfiEmail } from "react-icons/tfi";
 
 interface RequestType {
@@ -25,7 +26,7 @@ const request = {
 
 const styles = {
   input:
-    "w-full text-xs shadow-[0px_0px_2px_0px_rgba(24,83,151,1)] focus:ring-[#185397] focus:outline-none p-3 xl:p-2.5 mb-8 xl:mb-6",
+    "w-full text-xs border border-gray-400 focus:ring-[#185397] placeholder-[#333333] focus:outline-none p-3 xl:p-2.5 mb-8 xl:mb-6",
 };
 
 function Page() {
@@ -57,29 +58,41 @@ function Page() {
   return (
     <div className="relative pb-10">
       <div className="flex flex-col lg:flex-row lg:gap-10 w-[90%] lg:w-[80%] xl:w-[75%] mx-auto mt-10 md:mt-16">
-        <div className="w-full lg:w-[40%] xl:w-1/2 text-gray-600 dark:text-gray-400">
+        <div className="w-full lg:w-[40%] xl:w-1/2 text-[#333333]">
           <div className="xl:w-[80%]">
             <div className="flex items-center justify-between lg:block">
               <h1 className="text-4xl font-bold">Contact us</h1>
               <ul className="flex items-center gap-3 lg:hidden my-5">
                 <li>
-                  <Link href="#" className="flex items-center gap-3">
+                  <Link
+                    href="https://www.instagram.com/raceeduservices1?igsh=dDZ2bTZ1anU2M2Z1"
+                    target="_blank"
+                    className="flex items-center gap-3"
+                  >
                     <span className="text-[#185397] font-bold text-xl">
-                      <TfiEmail />
+                      <FaInstagram />
                     </span>
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="flex items-center gap-3">
+                  <Link
+                    href="https://www.facebook.com/share/WNBrWDJXg8Hso873/"
+                    target="_blank"
+                    className="flex items-center gap-3"
+                  >
                     <span className="text-[#185397] font-bold text-xl">
-                      <IoPhonePortraitSharp />
+                      <FaFacebookF />
                     </span>
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="flex items-center gap-3">
+                  <Link
+                    href="https://x.com/Raceduservices?t=UvnxM6yluN7mFkOhbUzUng&s=09"
+                    target="_blank"
+                    className="flex items-center gap-3"
+                  >
                     <span className="text-[#185397] font-bold text-xl">
-                      <ImLocation />
+                      <FaXTwitter />
                     </span>
                   </Link>
                 </li>
@@ -93,19 +106,25 @@ function Page() {
             </p>
             <ul className="hidden lg:block space-y-8">
               <li>
-                <Link href="#" className="flex items-center gap-3">
+                <Link
+                  href="mailto:info@raceeduconsult.com"
+                  className="flex items-center gap-3"
+                >
                   <span className="text-[#185397] font-bold text-lg">
                     <TfiEmail />
                   </span>
-                  <span>iheme.ifeanyi@yahoo.com</span>
+                  <span>info@raceeduconsult.com</span>
                 </Link>
               </li>
               <li>
-                <Link href="#" className="flex items-center gap-3">
+                <Link
+                  href="tel:+2348092330570"
+                  className="flex items-center gap-3"
+                >
                   <span className="text-[#185397] font-bold text-lg">
-                    <IoPhonePortraitSharp />
+                    <FaPhoneAlt />
                   </span>
-                  <span>+2348145663725</span>
+                  <span>+234 809 2330 570</span>
                 </Link>
               </li>
               <li>
@@ -119,7 +138,7 @@ function Page() {
             </ul>
           </div>
         </div>
-        <div className="w-full lg:w-[60%] xl:w-1/2 text-gray-600 dark:text-gray-400">
+        <div className="w-full lg:w-[60%] xl:w-1/2 text-[#333333]">
           <form
             onSubmit={handleSubmit}
             className="lg:max-w-lg mx-auto lg:p-10 bg-white lg:shadow-[0_4px_10px_rgba(0,0,0,0.3),_0_10px_30px_rgba(0,0,0,0.1)]"

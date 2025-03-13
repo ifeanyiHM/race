@@ -7,79 +7,13 @@ import { LiaLongArrowAltRightSolid } from "react-icons/lia";
 import BlurImage from "../components/BlurImage";
 import SwiperSlider from "../components/carousel/SwiperSlider";
 import { formattedItem } from "../utils/FormatString";
-
-const universityLogo = [
-  "university1",
-  "university2",
-  "university3",
-  "university4",
-  "university5",
-  "university6",
-  "university7",
-];
-
-const services = [
-  {
-    name: "Program & University Selection",
-    color: "#FCE4EC",
-    paragraph1:
-      "Choosing the right course for your study abroad experience is one of the most important decisions you’ll make. With a wide range of options available globally, it can be overwhelming to decide which program best aligns with your academic and career goals.",
-    paragraph2:
-      "Our Study Abroad Course Advice service is designed to help you make an informed choice, ensuring that you select a program that fits your interests, future aspirations, and lifestyle. Finding the right program and university is crucial to your success abroad. Our team will help you:",
-    list: [
-      "Explore universities and programs that align with your academic interests and career goals",
-      "Choose from a wide range of study destinations, including the USA, UK, Canada, Europe, and more.",
-      "Understand different academic systems and teaching styles to make an informed decision.",
-    ],
-  },
-  {
-    name: "Career Counselling",
-    color: "#E8EAF6",
-    paragraph1:
-      "Are you dreaming of studying abroad but unsure where to start? We’re here to help! Our Free Educational Counselling service is designed to guide you through every step of the process—from choosing the right program to securing your visa and preparing for your journey.",
-    paragraph2:
-      "Let us help you make your study abroad experience as smooth and successful as possible! Race Educational Services extends a helping hand to students seeking guidance on their educational journey through our free counselling service.",
-  },
-  {
-    name: "University Placement",
-    color: "#FFF9C4",
-    paragraph1:
-      "We don’t just fix you into a school we look at your credentials and choose the best program based on your credentials and your budget and make sure the right choices are made which will enhance your career in the future. ",
-  },
-  {
-    name: "Course Advice",
-    color: "#D1C4E9",
-    paragraph1:
-      "Studying abroad is not just an academic experience; it is a transformative journey that can significantly enhance your career prospects. We help you with Understanding job prospects and career opportunities after graduation, Information about post-study work visas in various countries, and Guidance on how to make the most of your international experience in your career. ",
-  },
-  {
-    name: "Visa Application Assistance",
-    color: "#C8E6C9",
-    paragraph1:
-      "We understand that visa applications can be confusing, Race Educational Service will guide you through your visa process, help you understand the visa requirements of your destination country and required documents, offer tips on how to increase your chances of visa approval.",
-    paragraph2:
-      "Our professional approach and guidance will improve the visa chances and ensures that you reach your dream land.",
-  },
-  {
-    name: "Pre-Departure Assistance",
-    color: "#FFCCBC",
-    paragraph1:
-      "Preparing for studying abroad can be exciting but also a bit overwhelming. Pre-departure planning is crucial to ensure you are ready for the adventure ahead. By preparing in advance, you can ensure that your study abroad experience is smooth and enjoyable.",
-    paragraph2:
-      "As you embark on this exciting journey, it’s essential to prepare properly to ensure a smooth and successful experience. Our Pre-Departure Guide will walk you through all the essential steps before you depart, from documentation to cultural preparation. Have questions? Check our FAQ section for answers to common queries about studying abroad.",
-  },
-];
-
-const countries = ["Canada", "UK", "USA", "Ireland"];
-
-const partners = ["partner1", "partner2", "partner3", "partner4", "partner5"];
-
-const programs = [
-  { course: "engineering", color: "#FFE3E3" },
-  { course: "business", color: "#F6FFE9" },
-  { course: "art", color: "#DDEDFF" },
-  { course: "health sciences", color: "#FFF1E1" },
-];
+import {
+  countries,
+  partners,
+  programs,
+  services,
+  universityLogo,
+} from "../utils/constant";
 
 function LandingPage() {
   // const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
@@ -117,7 +51,7 @@ function LandingPage() {
         <h2 className="text-2xl md:text-4xl font-bold text-[#185397]">
           Featured University
         </h2>
-        <p className="md:w-[80%] lg:w-[75%] xl:w-[70%] mx-auto pt-5 pb-2 font-medium text-[#4C4C4C] text-sm md:text-xl xl:text-2xl">
+        <p className="md:w-[80%] lg:w-[75%] xl:w-[70%] mx-auto pt-5 pb-2 font-medium text-[#333333] text-sm md:text-xl xl:text-2xl">
           Study at top ranked university with over 250 partner schools from top
           destinations. Want to study abroad?{" "}
         </p>
@@ -131,7 +65,7 @@ function LandingPage() {
         <h2 className="text-2xl md:text-4xl text-center font-bold text-[#185397]">
           Our Services
         </h2>
-        <ul className="w-[90%] lg:w-[70%] xl:w-[70%] mx-auto mt-6 md:mt-[5.563rem] grid grid-cols-2 gap-3 md:gap-8 items-stretch">
+        <ul className="w-[90%] lg:w-[70%] xl:w-[70%] mx-auto mt-6 md:mt-[5.563rem] grid grid-cols-2 gap-3 md:gap-8 items-stretch text-[#333333]">
           {services.map(
             ({ name, color, paragraph1, paragraph2, list }, index) => (
               <li key={name}>
@@ -235,13 +169,6 @@ function LandingPage() {
               <Link href={country.toLowerCase()} className="space-y-3">
                 {" "}
                 <div className="relative overflow-hidden group rounded-md md:rounded-xl lg:rounded-2xl w-full">
-                  {/* <Image
-                    src={`/country${index + 1}.png`}
-                    alt={country}
-                    width={550}
-                    height={376}
-                    className="shadow-[inset_25px_35px_35px_rgba(0,0,0,0.5)] w-full"
-                  /> */}
                   <BlurImage
                     src={`/country${index + 1}.png`}
                     alt={country}
@@ -251,7 +178,7 @@ function LandingPage() {
                   />
                   <div className="absolute inset-0 group-hover:shadow-[inset_0_25px_35px_rgba(0,0,0,0.2)] rounded-md md:rounded-xl lg:rounded-2xl"></div>
                 </div>
-                <p className="text-sm md:text-base lg:text-2xl font-bold">
+                <p className="text-sm md:text-base lg:text-xl font-semibold text-[#333333]">
                   Study in {country}
                 </p>
               </Link>

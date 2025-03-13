@@ -19,7 +19,7 @@ function page() {
           <h2 className="text-2xl md:text-3xl font-bold text-blue-600 text-center">
             Why Study in UK?
           </h2>
-          <p className="text-gray-700 leading-relaxed font-medium mt-6">
+          <p className="text-[#333333] leading-relaxed font-medium mt-6">
             <span className="text-blue-600 font-bold">The UK </span>
             is a global leader in research and education. it features top
             academic facilities, instructors, the most up-to-date technology,
@@ -29,7 +29,7 @@ function page() {
             the world&apos;s leading academics and experts; you also benefit
             from their constant academic support.
           </p>
-          <p className="text-gray-700 leading-relaxed font-medium mt-4">
+          <p className="text-[#333333] leading-relaxed font-medium mt-4">
             <span className="text-blue-600 font-bold">
               High-quality education:
             </span>
@@ -38,14 +38,14 @@ function page() {
             cutting-edge research, diverse programs, and rigorous academic
             standards
           </p>
-          <p className="text-gray-700 leading-relaxed font-medium mt-4">
+          <p className="text-[#333333] leading-relaxed font-medium mt-4">
             <span className="text-blue-600 font-bold">
               Cultural Experience:
             </span>{" "}
             UK has a rich cultural heritage, with a vibrant mix of traditions,
             art, and history, providing a unique and enriching environment.
           </p>
-          <p className="text-gray-700 leading-relaxed font-medium mt-4">
+          <p className="text-[#333333] leading-relaxed font-medium mt-4">
             <span className="text-blue-600 font-bold">
               Exceptional Quality of Life:
             </span>{" "}
@@ -54,7 +54,7 @@ function page() {
             cosmopolitan cities to picturesque countryside, experience the best
             of both worlds while pursuing your academic aspirations in the UK.
           </p>
-          <p className="text-gray-700 leading-relaxed font-medium mt-4">
+          <p className="text-[#333333] leading-relaxed font-medium mt-4">
             <span className="text-blue-600 font-bold">
               {" "}
               Multicultural environment:
@@ -63,7 +63,7 @@ function page() {
             diverse and multicultural atmosphere that enhances learning and
             networking thereby creating great career prospects.
           </p>
-          <p className="text-gray-700 leading-relaxed font-medium mt-4">
+          <p className="text-[#333333] leading-relaxed font-medium mt-4">
             <span className="text-blue-600 font-bold">
               {" "}
               Diverse Range of Courses:
