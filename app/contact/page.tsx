@@ -119,10 +119,10 @@ function Page() {
             </ul>
           </div>
         </div>
-        <div className="w-full lg:w-[60%] xl:w-1/2 bg-white text-gray-600 dark:text-gray-400">
+        <div className="w-full lg:w-[60%] xl:w-1/2 text-gray-600 dark:text-gray-400">
           <form
             onSubmit={handleSubmit}
-            className="lg:max-w-lg mx-auto lg:p-10 lg:shadow-[0_4px_10px_rgba(0,0,0,0.3),_0_10px_30px_rgba(0,0,0,0.1)]"
+            className="lg:max-w-lg mx-auto lg:p-10 bg-white lg:shadow-[0_4px_10px_rgba(0,0,0,0.3),_0_10px_30px_rgba(0,0,0,0.1)]"
           >
             <input
               type="text"
@@ -250,7 +250,7 @@ function Page() {
           </form>
         </div>
       </div>
-      <div className="hidden h-44 absolute w-full bottom-[-1px] z-[-1] bg-[#185397] lg:flex flex-col items-center justify-center text-white px-6 text-center"></div>
+      <div className="hidden h-44 absolute w-full bottom-[-1px] z-[-1] bg-[#185397] lg:block"></div>
     </div>
   );
 }
