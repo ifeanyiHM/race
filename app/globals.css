@@ -40,3 +40,8 @@ countries:hover {
 .arrow:hover {
   filter: brightness(95%);
 }
+
+.service-image {
+  filter: invert(15%) sepia(0%) saturate(1%) hue-rotate(84deg) brightness(101%)
+    contrast(87%);
+}

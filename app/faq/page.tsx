@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import BlurImage from "../../components/BlurImage";
 
 // import { albertSans } from "../layout";
 
@@ -63,7 +64,8 @@ function Page() {
   return (
     <div>
       {" "}
-      <div className="relative pt-[47%] md:pt-[25%] w-full bg-[#185397] bg-fixed bg-cover bg-center">
+      <div className="relative pt-[47%] md:pt-[25%] bg-fixed bg-cover bg-center bg-gradient-to-r from-[#5a3d3d] via-[#222222] to-[#0f1412]">
+        <BlurImage src={`/faq.png`} alt="partner hero background" fill />
         <div className="w-full xl:w-auto absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
           <h1
             className={` text-xl md:text-3xl lg:text-5xl min-[1440px]:text-6xl font-bold`}
@@ -83,7 +85,7 @@ function Page() {
                 } px-16 py-3 cursor-pointer shadow-[0px_2px_3px_2px_rgba(0,0,0,0.2)]`}
               >
                 <h2
-                  className="relative text-sm md:text-base font-bold text-gray-700"
+                  className="relative text-sm md:text-base font-bold text-[#333333]"
                   onClick={() =>
                     setOpenIndex(openIndex === index ? null : index)
                   }
@@ -94,7 +96,7 @@ function Page() {
                   {question}
                 </h2>
                 {openIndex === index && (
-                  <p className="text-xs md:text-sm mt-2 text-gray-500 font-medium">
+                  <p className="text-xs md:text-sm mt-2 text-[#333333] font-medium">
                     {answer}
                   </p>
                 )}

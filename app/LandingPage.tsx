@@ -83,7 +83,7 @@ function LandingPage() {
                         alt={name}
                         width={67}
                         height={67}
-                        className="mb-5 md:mb-0 w-5 h-5 md:w-11 md:h-11 xl:w-[67px] xl:h-[67px]"
+                        className="service-image mb-5 md:mb-0 w-5 h-5 md:w-11 md:h-11 xl:w-[67px] xl:h-[67px]"
                       />
                       <p className="text-sm md:text-base font-bold">{name}</p>
                     </div>
@@ -104,15 +104,24 @@ function LandingPage() {
                           openIndex === 0
                             ? "max-h-[80vh] md:max-h-full overflow-x-hidden overflow-y-auto md:overflow-hidden"
                             : "overflow-hidden"
-                        } relative text-sm md:text-base p-4 md:p-10 rounded-lg shadow-lg w-full text-gray-700`}
+                        } relative text-sm md:text-base p-4 md:p-10 rounded-lg shadow-lg w-full text-[#333333]`}
                       >
                         <div
                           style={{ backgroundColor: color }}
                           className="absolute -top-10 -left-10 w-28 h-28 rounded-full"
                         ></div>
-                        <h2 className="relative z-[2px] text-xl md:text-2xl font-semibold pb-1 border-b border-gray-400">
-                          {name}
-                        </h2>
+                        <div className="relative z-[2px] flex items-center gap-2 pb-1 border-b border-gray-400">
+                          <h2 className="text-xl md:text-2xl font-semibold">
+                            {name}
+                          </h2>
+                          <Image
+                            src={`/icon/service${openIndex + 1}.svg`}
+                            alt={name}
+                            width={24}
+                            height={24}
+                            className="service-image"
+                          />
+                        </div>
                         <div className="py-4 space-y-2">
                           <p className="py-4">{paragraph1}</p>
                           {paragraph2 && <p>{paragraph2}</p>}

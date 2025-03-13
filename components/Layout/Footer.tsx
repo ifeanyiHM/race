@@ -1,13 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { formattedItem } from "../../utils/FormatString";
+import { countries, footerList, socialHandles } from "../../utils/constant";
 
-const countries = ["Canada", "UK", "USA", "Ireland"];
-
-const footerList = ["Terms of Use", "Blogs", "Frequently Asked Questions"];
-
-const listStyle =
-  "text-white font-medium text-sm lg:text-base min-[1500]:text-lg";
+const listStyle = "text-white text-sm lg:text-base min-[1500]:text-lg";
 function Footer() {
   return (
     <div className="bg-[#185397] pt-10 pb-5 md:pt-16 md:pb-4">
@@ -32,7 +28,7 @@ function Footer() {
               {countries.map((country) => (
                 <li
                   key={country}
-                  className={`${listStyle} border-b border-white `}
+                  className={`${listStyle} border-b border-white/30`}
                 >
                   <Link href={country.toLowerCase()}>study in {country}</Link>
                 </li>
@@ -41,14 +37,14 @@ function Footer() {
           </div>
           <div className="md:w-1/3 flex flex-col gap-3 md:gap-8 md:text-end">
             <ul className="flex md:justify-end items-center gap-6">
-              {["instagram", "facebook", "twitter"].map((socials) => (
-                <li key={socials}>
+              {socialHandles.map(({ social, link }) => (
+                <li key={social}>
                   {" "}
-                  <Link href={socials.toLowerCase()}>
+                  <Link href={link}>
                     {" "}
                     <Image
-                      src={`/icon/${socials}.svg`}
-                      alt={socials}
+                      src={`/icon/${social}.svg`}
+                      alt={social}
                       width={25}
                       height={25}
                       className=""
@@ -75,13 +71,17 @@ function Footer() {
             </ul>
           </div>
         </div>
-        <Image
-          src={`/race_logo_f.svg`}
-          alt="race educational service logo"
-          width={129}
-          height={140}
-          className=""
-        />
+        <div className="bg-white/10 inline-block w-auto">
+          <Link href="/" className="">
+            <Image
+              src={`/race_logo_f.svg`}
+              alt="race educational service logo"
+              width={129}
+              height={140}
+              className=""
+            />
+          </Link>
+        </div>
       </div>
     </div>
   );

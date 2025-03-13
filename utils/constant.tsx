@@ -216,3 +216,22 @@ export const partner = [
     country: "canada",
   },
 ];
+
+//FOOTER
+
+export const footerList = ["Partners", "Contact", "Frequently Asked Questions"];
+
+export const socialHandles = [
+  {
+    social: "instagram",
+    link: "https://www.instagram.com/raceeduservices1?igsh=dDZ2bTZ1anU2M2Z1",
+  },
+  {
+    social: "facebook",
+    link: "https://www.facebook.com/share/WNBrWDJXg8Hso873/",
+  },
+  {
+    social: "twitter",
+    link: "https://x.com/Raceduservices?t=UvnxM6yluN7mFkOhbUzUng&s=09",
+  },
+];
