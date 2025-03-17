@@ -49,11 +49,11 @@ function Page() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    console.log("submitted details", details);
-    setDetails(request);
-  };
+  // const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  //   e.preventDefault();
+  //   console.log("submitted details", details);
+  //   setDetails(request);
+  // };
 
   return (
     <div className="relative pb-10">
@@ -140,7 +140,9 @@ function Page() {
         </div>
         <div className="w-full lg:w-[60%] xl:w-1/2 text-[#333333]">
           <form
-            onSubmit={handleSubmit}
+            // onSubmit={handleSubmit}
+            action="https://formspree.io/f/xovevndk"
+            method="POST"
             className="lg:max-w-lg mx-auto lg:p-10 bg-white lg:shadow-[0_4px_10px_rgba(0,0,0,0.3),_0_10px_30px_rgba(0,0,0,0.1)]"
           >
             <input
