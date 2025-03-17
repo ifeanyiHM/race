@@ -138,7 +138,7 @@ function LandingPage() {
                         </ul>
                         <div className="text-xs md:text-sm">
                           <p>
-                            Begin you application with a free conselling today
+                            Begin your application with a free conselling today
                           </p>
                           <p className="underline">
                             <Link href="/contact">Contact for more info</Link>

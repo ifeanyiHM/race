@@ -99,10 +99,10 @@ function Page() {
               </ul>
             </div>
             <p className="my-10">
-              Thank you for taking time to visit our website. Should you have
-              questions, suggestions, comments or feedback, please contact us
-              using the form or contact information below or the information at
-              the right-hand side.
+              Thank you for taking time to visit our website. If you have any
+              questions, suggestions, comments or feedback, please feel free to
+              contact us using the contact information below or the form on the
+              right - We&apos;d love to hear from you!
             </p>
             <ul className="hidden lg:block space-y-8">
               <li>
@@ -132,7 +132,7 @@ function Page() {
                   <span className="text-[#185397] font-bold text-lg">
                     <ImLocation />
                   </span>
-                  <span>24, TapaHouse Surulere Lagos.</span>
+                  <span>8, Onikoyi Street Obele Odan, Surulere Lagos.</span>
                 </Link>
               </li>
             </ul>
