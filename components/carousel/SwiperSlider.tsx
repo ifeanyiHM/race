@@ -8,9 +8,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 interface SwiperSliderProps {
   imageList: string[];
+  imageType: "svg" | "png";
 }
 
-export default function SwiperSlider({ imageList }: SwiperSliderProps) {
+export default function SwiperSlider({
+  imageList,
+  imageType,
+}: SwiperSliderProps) {
   return (
     <div className="w-full max-w-4xl mx-auto">
       <Swiper
@@ -28,7 +32,7 @@ export default function SwiperSlider({ imageList }: SwiperSliderProps) {
         {imageList.map((image, index) => (
           <SwiperSlide key={index} className="flex justify-center items-center">
             <Image
-              src={`/${image}.svg`}
+              src={`/${image}.${imageType}`}
               alt={image}
               width={262}
               height={229}

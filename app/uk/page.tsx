@@ -1,6 +1,6 @@
 import SwiperSlider from "../../components/carousel/SwiperSlider";
+import { ukUniversities } from "../../utils/constant";
 
-const partners = ["partner1", "partner2", "partner3", "partner4", "partner2"];
 function page() {
   return (
     <div>
@@ -83,7 +83,7 @@ function page() {
           Partners Universities in UK
         </h2>
         <div className="md:w-[80%] xl:w-[70%] mx-3 md:mx-auto">
-          <SwiperSlider imageList={partners} />
+          <SwiperSlider imageList={ukUniversities} imageType="svg" />
         </div>
       </div>
     </div>

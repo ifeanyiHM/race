@@ -1,6 +1,6 @@
 import SwiperSlider from "../../components/carousel/SwiperSlider";
+import { usaUniversities } from "../../utils/constant";
 
-const partners = ["partner1", "partner2", "partner3", "partner4", "partner2"];
 function page() {
   return (
     <div>
@@ -70,8 +70,8 @@ function page() {
         <h2 className="text-xl md:text-4xl font-bold text-[#185397]">
           Partners Universities in USA
         </h2>
-        <div className="md:w-[80%] xl:w-[70%] mx-3 md:mx-auto">
-          <SwiperSlider imageList={partners} />
+        <div className="md:w-[80%] xl:w-[70%] mx-3 md:mx-auto mt-2.5 md:mt-5">
+          <SwiperSlider imageList={usaUniversities} imageType="png" />
         </div>
       </div>
     </div>

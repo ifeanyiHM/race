@@ -56,7 +56,7 @@ function LandingPage() {
           destinations. Want to study abroad?{" "}
         </p>
         <div className="md:w-[80%] xl:w-[70%] mx-3 md:mx-auto">
-          <SwiperSlider imageList={universityLogo} />
+          <SwiperSlider imageList={universityLogo} imageType="svg" />
         </div>
       </div>
 
@@ -202,7 +202,7 @@ function LandingPage() {
           Partners
         </h2>
         <div className="md:w-[80%] xl:w-[70%] mx-3 md:mx-auto">
-          <SwiperSlider imageList={partners} />
+          <SwiperSlider imageList={partners} imageType="svg" />
         </div>
       </div>
 

@@ -235,3 +235,49 @@ export const socialHandles = [
     link: "https://x.com/Raceduservices?t=UvnxM6yluN7mFkOhbUzUng&s=09",
   },
 ];
+
+//location pages
+export const ukUniversities = [
+  "partner1",
+  "partner2",
+  "partner3",
+  "partner4",
+  "university5",
+];
+
+export const usaUniversities = [
+  "partner/university-of-arizona",
+  "partner/murray-state-university",
+  "partner/auburn-university",
+  // "partner/university-of-illinois",
+  "partner/washington-state-university",
+  // "partner/louisiana-state-university",
+  // "partner/arkansas-state-university",
+  // "partner/florida-international-university",
+  "partner/trine-university",
+  // "partner/kent-state-university",
+];
+
+export const canadaUniversities = [
+  "partner/university-of-new-brunswick",
+  "partner/windsor-university",
+  "partner/university-of-prince-edward-island",
+  // "partner/university-of-guelph",
+  "partner/wilfrid-laurier-university",
+  // "partner/university-of-lethbridge",
+  // "partner/university-of-saskatchewan",
+  "partner/queens-university",
+  "partner/thompson-rivers-university",
+  "partner/university-of-manitoba",
+];
+
+export const canadaColleges = [
+  // "partner/Fleming-college",
+  // "partner/fanshawe-college",
+  "partner/conestoga-college",
+  "partner/new-brunswick-community-college",
+  "partner/algonquin-college",
+  "partner/centennial-college",
+  "partner/sault-college",
+  // "partner/humber-college",
+];
