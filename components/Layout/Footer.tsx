@@ -40,7 +40,7 @@ function Footer() {
               {socialHandles.map(({ social, link }) => (
                 <li key={social}>
                   {" "}
-                  <Link href={link}>
+                  <Link href={link} target="_blank">
                     {" "}
                     <Image
                       src={`/icon/${social}.svg`}

@@ -281,3 +281,60 @@ export const canadaColleges = [
   "partner/sault-college",
   // "partner/humber-college",
 ];
+
+//ID
+
+interface CourseDataProps {
+  faculty: string;
+  courses: string[];
+}
+
+export const discipline: CourseDataProps[] = [
+  {
+    faculty: "engineering",
+    courses: [
+      "Computer Engineering",
+      "Construction Engineering",
+      "Industrial Engineering",
+      "Electrical & Electronic Engineering",
+      "Chemical Engineering",
+      "Biomedical Engineering",
+      "Civil Engineering",
+      "Civil Engineering",
+      "Aeronautic Engineering",
+    ],
+  },
+  {
+    faculty: "art",
+    courses: [
+      "Communication",
+      "Baking and Pastries",
+      "Film and Media Production",
+      "Hospitality & Tourism",
+      "Law and Justice",
+      "Photography",
+      "Fashion",
+      "Interior Design",
+      "History",
+    ],
+  },
+  {
+    faculty: "business",
+    courses: [
+      "Business Administration",
+      "Business Analytics",
+      "Agricultural Business",
+      "Enterpreneurship",
+    ],
+  },
+  {
+    faculty: "health sciences",
+    courses: [
+      "Public Health",
+      "Kinesiology",
+      "Environmental Health",
+      "Biology",
+      "Digital Health",
+    ],
+  },
+];

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import SwiperSlider from "../../components/carousel/SwiperSlider";
 import { canadaColleges, canadaUniversities } from "../../utils/constant";
 
@@ -68,9 +69,12 @@ function page() {
         </div>
       </div>
       <div className="text-center py-16 lg:pb-32 lg:pt-24">
-        <button className="w-44 md:w-56 min-[1500px]:w-[21.9rem] text-white py-2 lg:py-3 min-[1500px]:py-[1.125rem] bg-[#185397] rounded-[2rem] font-bold text-xs md:text-sm lg:text-base">
+        <Link
+          href="/contact"
+          className="inline-block w-44 md:w-56 min-[1500px]:w-[21.9rem] text-white py-2 lg:py-3 min-[1500px]:py-[1.125rem] bg-[#185397] rounded-[2rem] font-bold text-xs md:text-sm lg:text-base"
+        >
           Start Application
-        </button>
+        </Link>
       </div>
       <div className="pb-20 md:pb-28 lg:pb-36 text-center">
         <h2 className="text-xl md:text-4xl font-bold text-[#185397]">

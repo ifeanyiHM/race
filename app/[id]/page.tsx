@@ -3,65 +3,11 @@ import Link from "next/link";
 import { notFound, useParams } from "next/navigation";
 import BlurImage from "../../components/BlurImage";
 import { capitalizeWord, formattedItem } from "../../utils/FormatString";
-
-interface CourseDataProps {
-  faculty: string;
-  courses: string[];
-}
-
-const data: CourseDataProps[] = [
-  {
-    faculty: "engineering",
-    courses: [
-      "Computer Engineering",
-      "Construction Engineering",
-      "Industrial Engineering",
-      "Electrical & Electronic Engineering",
-      "Chemical Engineering",
-      "Biomedical Engineering",
-      "Civil Engineering",
-      "Civil Engineering",
-      "Aeronautic Engineering",
-    ],
-  },
-  {
-    faculty: "art",
-    courses: [
-      "Communication",
-      "Baking and Pastries",
-      "Film and Media Production",
-      "Hospitality & Tourism",
-      "Law and Justice",
-      "Photography",
-      "Fashion",
-      "Interior Design",
-      "History",
-    ],
-  },
-  {
-    faculty: "business",
-    courses: [
-      "Business Administration",
-      "Business Analytics",
-      "Agricultural Business",
-      "Enterpreneurship",
-    ],
-  },
-  {
-    faculty: "health sciences",
-    courses: [
-      "Public Health",
-      "Kinesiology",
-      "Environmental Health",
-      "Biology",
-      "Digital Health",
-    ],
-  },
-];
+import { discipline } from "../../utils/constant";
 
 function Page() {
   const params = useParams();
-  const courseData = data.find(
+  const courseData = discipline.find(
     (item) => formattedItem(item.faculty) === (params.id as string)
   );
 
@@ -114,9 +60,12 @@ function Page() {
             </ul>
           </div>
           <div className="text-center pb-16 lg:pb-32">
-            <button className="w-44 md:w-56 min-[1500px]:w-[21.9rem] text-white py-2 lg:py-3 min-[1500px]:py-[1.125rem] bg-[#185397] rounded-[2rem] font-bold text-xs md:text-sm lg:text-base">
+            <Link
+              href="/contact"
+              className="inline-block w-44 md:w-56 min-[1500px]:w-[21.9rem] text-white py-2 lg:py-3 min-[1500px]:py-[1.125rem] bg-[#185397] rounded-[2rem] font-bold text-xs md:text-sm lg:text-base"
+            >
               Find more courses
-            </button>
+            </Link>
           </div>
         </div>
       )}
@@ -129,7 +78,7 @@ function Page() {
           <p className="text-sm md:text-lg text-gray-600 mt-2">
             The faculty you are looking for has no listed courses.
           </p>
-          <Link href="/courses">
+          <Link href="#programs">
             <button className="mt-6 px-6 py-3 bg-[#185397] text-white rounded-full font-semibold text-sm md:text-base hover:bg-[#143c73] transition-all">
               Explore Other Faculties
             </button>
