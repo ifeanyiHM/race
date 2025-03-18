@@ -2,6 +2,10 @@ import Link from "next/link";
 import SwiperSlider from "../../components/carousel/SwiperSlider";
 import { ukUniversities } from "../../utils/constant";
 
+export const metadata = {
+  title: "Study in UK",
+};
+
 function page() {
   return (
     <div>

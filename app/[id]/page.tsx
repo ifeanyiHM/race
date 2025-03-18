@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { notFound, useParams } from "next/navigation";
+import { useEffect } from "react";
 import BlurImage from "../../components/BlurImage";
 import { capitalizeWord, formattedItem } from "../../utils/FormatString";
 import { discipline } from "../../utils/constant";
@@ -16,6 +17,12 @@ function Page() {
   if (!courseData) {
     notFound();
   }
+
+  useEffect(() => {
+    if (params.id) {
+      document.title = `${capitalizeWord(params.id as string)} | Race Educational Services`;
+    }
+  }, [params.id]);
 
   return (
     <>

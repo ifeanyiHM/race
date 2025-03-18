@@ -2,6 +2,10 @@ import Link from "next/link";
 import SwiperSlider from "../../components/carousel/SwiperSlider";
 import { usaUniversities } from "../../utils/constant";
 
+export const metadata = {
+  title: "Study in USA",
+};
+
 function page() {
   return (
     <div>

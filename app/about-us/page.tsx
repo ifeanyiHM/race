@@ -1,5 +1,9 @@
 import BlurImage from "../../components/BlurImage";
 import { albertSans } from "../font";
+
+export const metadata = {
+  title: "About Us",
+};
 function page() {
   return (
     <div>

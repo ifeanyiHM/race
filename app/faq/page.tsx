@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import BlurImage from "../../components/BlurImage";
 
 // import { albertSans } from "../layout";
@@ -60,6 +60,10 @@ const faqs = [
 
 function Page() {
   const [openIndex, setOpenIndex] = useState<number | null>(1);
+
+  useEffect(() => {
+    document.title = `FAQ | Race Educational Services`;
+  }, []);
 
   return (
     <div>

@@ -1,5 +1,9 @@
 import Link from "next/link";
 
+export const metadata = {
+  title: "Study in Ireland",
+};
+
 function page() {
   return (
     <div>

@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BiChevronDown } from "react-icons/bi";
 import BlurImage from "../../components/BlurImage";
 import { formattedItem } from "../../utils/FormatString";
@@ -35,6 +35,10 @@ function Page() {
   const handleFindMore = () => {
     setCount((prev) => prev + 10);
   };
+
+  useEffect(() => {
+    document.title = `Partners | Race Educational Services`;
+  }, []);
 
   return (
     <div>

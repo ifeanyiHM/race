@@ -71,7 +71,7 @@ function Footer() {
             </ul>
           </div>
         </div>
-        <div className="bg-white/10 inline-block w-auto">
+        <div className="bg-white/10 inline-block w-auto mt-8 md:mt-0">
           <Link href="/" className="">
             <Image
               src={`/race_logo_f.svg`}

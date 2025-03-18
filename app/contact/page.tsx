@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BiEnvelope } from "react-icons/bi";
 import { FaFacebookF, FaInstagram, FaPhoneAlt } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
@@ -49,11 +49,9 @@ function Page() {
     }));
   };
 
-  // const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-  //   e.preventDefault();
-  //   console.log("submitted details", details);
-  //   setDetails(request);
-  // };
+  useEffect(() => {
+    document.title = `Contact | Race Educational Services`;
+  }, []);
 
   return (
     <div className="relative pb-10">
