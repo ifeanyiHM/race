@@ -6,7 +6,7 @@ import { countries, footerList, socialHandles } from "../../utils/constant";
 const listStyle = "text-white text-sm lg:text-base min-[1500]:text-lg";
 function Footer() {
   return (
-    <div className="bg-[#185397] pt-10 pb-5 md:pt-16 md:pb-4">
+    <footer className="bg-[#185397] pt-10 pb-5 md:pt-16 md:pb-4">
       <div className="w-[90%] mx-auto">
         <div className="flex flex-col md:flex-row gap-10 md:gap-[5%] xl:gap-[10%]">
           <div className="md:w-[38.6%] lg:w-[43%] flex flex-col gap-3 md:gap-8">
@@ -24,13 +24,13 @@ function Footer() {
             <h3 className="text-[#B4B4B4] font-medium text-lg lg:text-xl">
               Countries to study
             </h3>
-            <ul className="space-y-3">
+            <ul className="space-y-2">
               {countries.map((country) => (
                 <li
                   key={country}
                   className={`${listStyle} border-b border-white/30`}
                 >
-                  <Link href={country.toLowerCase()}>study in {country}</Link>
+                  <Link href={country.toLowerCase()}>Study in {country}</Link>
                 </li>
               ))}
             </ul>
@@ -83,7 +83,7 @@ function Footer() {
           </Link>
         </div>
       </div>
-    </div>
+    </footer>
   );
 }
 

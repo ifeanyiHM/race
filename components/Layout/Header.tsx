@@ -55,7 +55,7 @@ function Header({ classname }: HeaderProps) {
   }, []);
 
   return (
-    <div className="sticky top-0 z-10 w-full md:shadow-md">
+    <nav className="sticky top-0 z-10 w-full md:shadow-md">
       <div className={`${classname} w-full bg-[#185397] py-2`}>
         <div className="flex justify-between items-center text-white text-xs md:text-sm font-medium px-2 md:px-0 md:w-[95%] lg:w-[93%] mx-auto">
           <p>
@@ -232,7 +232,7 @@ function Header({ classname }: HeaderProps) {
           </ul>
         </div>
       </div>
-    </div>
+    </nav>
   );
 }
 

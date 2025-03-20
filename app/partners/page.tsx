@@ -23,7 +23,7 @@ function Page() {
     (p) =>
       selectedCountry === "All" ||
       selectedCountry === "Sort by Country" ||
-      p.country === selectedCountry.toLocaleLowerCase()
+      p.country.toLowerCase() === selectedCountry.toLocaleLowerCase()
   );
 
   //sort alphabetically
@@ -41,23 +41,17 @@ function Page() {
   }, []);
 
   return (
-    <div>
+    <>
       {" "}
-      <div className="relative pt-[23%] w-full bg-fixed bg-cover bg-center bg-gradient-to-r from-[#5a3d3d] via-[#222222] to-[#0f1412]">
+      <header className="relative pt-[23%] w-full bg-fixed bg-cover bg-center bg-gradient-to-r from-[#5a3d3d] via-[#222222] to-[#0f1412]">
         <BlurImage
           src={`/partner/partner-head.png`}
           alt="partner hero background"
           fill
         />
-        <div className="w-full xl:w-auto absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
-          {/* <h1
-            className={`${albertSans.className} text-xl md:text-3xl lg:text-5xl min-[1440px]:text-6xl font-bold`}
-          >
-            Partners
-          </h1> */}
-        </div>
-      </div>
-      <div className="w-[90%] md:w-[95%] lg:w-[93%] mx-auto mt-10">
+        <div className="w-full xl:w-auto absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white"></div>
+      </header>
+      <section className="w-[90%] md:w-[95%] lg:w-[93%] mx-auto mt-10">
         <div className="flex items-center justify-between">
           <h2 className="text-[#185397] text-xl font-bold">Universities</h2>
 
@@ -87,20 +81,26 @@ function Page() {
               {/* Dropdown List */}
               {isOpen && (
                 <ul className="absolute w-full mt-2 text-sm text-gray-700 bg-white shadow-xl rounded-md overflow-hidden">
-                  {["All", "UK", "USA", "Ireland", "Canada"].map(
-                    (country, index) => (
-                      <li
-                        key={index}
-                        onClick={() => {
-                          setSelectedCountry(country);
-                          setIsOpen(false);
-                        }}
-                        className="px-4 py-1 cursor-pointer hover:bg-gray-200 transition-colors"
-                      >
-                        {country}
-                      </li>
-                    )
-                  )}
+                  {[
+                    "All",
+                    "UK",
+                    "USA",
+                    "Ireland",
+                    "Canada",
+                    "Australia",
+                    "Germany",
+                  ].map((country, index) => (
+                    <li
+                      key={index}
+                      onClick={() => {
+                        setSelectedCountry(country);
+                        setIsOpen(false);
+                      }}
+                      className="px-4 py-1 cursor-pointer hover:bg-gray-200 transition-colors"
+                    >
+                      {country}
+                    </li>
+                  ))}
                 </ul>
               )}
             </div>
@@ -175,8 +175,8 @@ function Page() {
             </div>
           </>
         )}
-      </div>
-    </div>
+      </section>
+    </>
   );
 }
 

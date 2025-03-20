@@ -5,7 +5,8 @@ import LandingPage from "./LandingPage";
 export default function Home() {
   return (
     <div className="w-full">
-      <Header classname="hidden" />
+      {/* <Header classname="hidden" /> */}
+      <Header classname="" />
       <LandingPage />
       <Footer />
     </div>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import BreadCrumb from "../../components/BreadCrumb";
 import SwiperSlider from "../../components/carousel/SwiperSlider";
 import { ukUniversities } from "../../utils/constant";
 
@@ -8,18 +9,13 @@ export const metadata = {
 
 function page() {
   return (
-    <div>
+    <>
       {" "}
-      <div className="relative pt-[47%] md:pt-[25%] w-full bg-[url('/uk.svg')] bg-fixed bg-cover bg-center md:bg-[left]">
-        <div className="w-full xl:w-auto absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
-          {/* <h1
-            className={`${albertSans.className} text-xl md:text-3xl lg:text-5xl min-[1440px]:text-6xl font-bold`}
-          >
-            Study In UK
-          </h1> */}
-        </div>
-      </div>
-      <div className="w-[90%] lg:w-[80%] xl:w-[70%] mx-auto">
+      <header className="relative pt-[47%] md:pt-[25%] w-full bg-[url('/uk.svg')] bg-fixed bg-cover bg-center md:bg-[left]">
+        <div className="w-full xl:w-auto absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white"></div>
+      </header>
+      <BreadCrumb />
+      <section className="w-[90%] lg:w-[80%] xl:w-[70%] mx-auto">
         <div className="pt-16 md:pt-24">
           <h2 className="text-2xl md:text-3xl font-bold text-blue-600 text-center">
             Why Study in UK?
@@ -77,7 +73,7 @@ function page() {
             courses that match your interests and career goals.
           </p>
         </div>
-      </div>
+      </section>
       <div className="text-center py-16 lg:pb-32 lg:pt-24">
         <Link
           href="/contact"
@@ -94,7 +90,7 @@ function page() {
           <SwiperSlider imageList={ukUniversities} imageType="svg" />
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

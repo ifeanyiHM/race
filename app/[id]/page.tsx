@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { notFound, useParams } from "next/navigation";
 import { useEffect } from "react";
+import { FaAnglesRight } from "react-icons/fa6";
 import BlurImage from "../../components/BlurImage";
 import { capitalizeWord, formattedItem } from "../../utils/FormatString";
 import { discipline } from "../../utils/constant";
@@ -20,21 +21,18 @@ function Page() {
 
   useEffect(() => {
     if (params.id) {
-      document.title = `${capitalizeWord(params.id as string)} | Race Educational Services`;
+      document.title = `${capitalizeWord(
+        params.id as string
+      )} | Race Educational Services`;
     }
   }, [params.id]);
 
   return (
     <>
       {courseData && courseData?.courses.length > 0 && (
-        <div>
+        <>
           {" "}
-          <div
-            // style={{
-            //   backgroundImage: `url('/${courseData.faculty}/${courseData.faculty}-head.png')`,
-            // }}
-            className="relative pt-[47%] md:pt-[25%] w-full bg-fixed bg-cover bg-center bg-gradient-to-r from-[#5a3d3d] via-[#222222] to-[#0f1412]"
-          >
+          <header className="relative pt-[47%] md:pt-[25%] w-full bg-fixed bg-cover bg-center bg-gradient-to-r from-[#5a3d3d] via-[#222222] to-[#0f1412]">
             <BlurImage
               src={`/${courseImg}/${courseImg}-head.png`}
               alt={`${courseData.faculty} hero background`}
@@ -48,16 +46,39 @@ function Page() {
                 {capitalizeWord(courseData.faculty)}
               </h1>
             </div>
-          </div>
-          <div className="w-[90%] lg:w-[90%] xl:w-[70%] mx-auto">
+          </header>
+          <section className="text-[#333333] text-sm px-2 md:px-0 md:w-[95%] lg:w-[93%] mx-auto">
+            <ul className="flex items-center space-x-2 font-medium">
+              {discipline.map((item, index) => (
+                <li key={index} className="flex items-center">
+                  <Link
+                    href={formattedItem(item.faculty)}
+                    className="hover:text-blue-600"
+                  >
+                    {capitalizeWord(item.faculty)}
+                  </Link>
+                  {index < discipline.length - 1 && (
+                    <span className="mx-2">
+                      <FaAnglesRight />
+                    </span>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </section>
+          <section className="w-[90%] lg:w-[90%] xl:w-[70%] mx-auto">
             <ul className="grid grid-cols-2 md:grid-cols-3 gap-1.5 md:gap-3 py-14 md:py-28">
               {courseData.courses.map((course, index) => (
-                <li key={index} className="relative">
+                <li
+                  key={index}
+                  className="relative hover:scale-105 transition-transform duration-300"
+                >
                   <BlurImage
                     src={`/${courseImg}/${courseImg}${index + 1}.png`}
                     alt={course}
                     width={358}
                     height={345}
+                    classname="w-full"
                   />
                   <span className="absolute top-6 left-6 font-bold text-white">
                     {course}
@@ -65,7 +86,7 @@ function Page() {
                 </li>
               ))}
             </ul>
-          </div>
+          </section>
           <div className="text-center pb-16 lg:pb-32">
             <Link
               href="/contact"
@@ -74,7 +95,7 @@ function Page() {
               Find more courses
             </Link>
           </div>
-        </div>
+        </>
       )}
 
       {courseData?.courses.length === 0 && (

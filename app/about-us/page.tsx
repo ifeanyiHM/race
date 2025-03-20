@@ -6,9 +6,9 @@ export const metadata = {
 };
 function page() {
   return (
-    <div>
+    <>
       {" "}
-      <div className="relative pt-[47%] md:pt-[25%] w-full bg-fixed bg-cover bg-center md:bg-[left] bg-gradient-to-r from-[#5a3d3d] via-[#222222] to-[#0f1412]">
+      <header className="relative pt-[47%] md:pt-[25%] w-full bg-fixed bg-cover bg-center md:bg-[left] bg-gradient-to-r from-[#5a3d3d] via-[#222222] to-[#0f1412]">
         <BlurImage
           src={`/about-us.png`}
           alt="about us hero background"
@@ -22,8 +22,8 @@ function page() {
             About Us
           </h1>
         </div>
-      </div>
-      <div className="w-[90%] lg:w-[80%] xl:w-[70%] mx-auto">
+      </header>
+      <section className="w-[90%] lg:w-[80%] xl:w-[70%] mx-auto">
         <div className="md:flex gap-8 items-center pt-14 pb-20">
           <div className="hidden md:flex gap-2 lg:gap-5 w-1/2 items-center">
             <div className="">
@@ -123,8 +123,8 @@ function page() {
             </p>
           </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </>
   );
 }
 

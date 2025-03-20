@@ -62,7 +62,14 @@ export const services = [
   },
 ];
 
-export const countries = ["Canada", "UK", "USA", "Ireland"];
+export const countries = [
+  "Canada",
+  "UK",
+  "USA",
+  "Ireland",
+  "Australia",
+  "Germany",
+];
 
 export const partners = [
   "partner1",
@@ -82,139 +89,83 @@ export const programs = [
 //PARTNERS PAGE
 
 export const partner = [
+  // Australia
+  { university: "Deakin University", country: "Australia" },
+  { university: "Federation University", country: "Australia" },
+  { university: "Griffith University", country: "Australia" },
+  { university: "Kaplan Business School", country: "Australia" },
+  { university: "La Trobe University", country: "Australia" },
+  { university: "The University of Notre Dame", country: "Australia" },
+  { university: "Torrens University", country: "Australia" },
+  { university: "Western Sydney University", country: "Australia" },
+
+  // Canada
+  { university: "Algonquin College", country: "Canada" },
+  { university: "Centennial College", country: "Canada" },
+  { university: "Conestoga College", country: "Canada" },
+  { university: "Fleming College", country: "Canada" },
+  { university: "New Brunswick community College", country: "Canada" },
+  { university: "Queen’s University", country: "Canada" },
+  { university: "Sault College", country: "Canada" },
+  { university: "Thompson Rivers University", country: "Canada" },
+  { university: "University College Birmingham", country: "Canada" },
+  { university: "University of Guelph", country: "Canada" },
+  { university: "University of Hertfordshire", country: "Canada" },
+  { university: "University of Lethbridge", country: "Canada" },
+  { university: "University of Manitoba", country: "Canada" },
+  { university: "University of New Brunswick", country: "Canada" },
+  { university: "University of Prince Edward Island", country: "Canada" },
+  { university: "University Of Saskatchewan", country: "Canada" },
+  { university: "Wilfrid Laurier University", country: "Canada" },
+  { university: "Windsor University", country: "Canada" },
+
+  // Germany
+  { university: "GISMA University of Applied Sciences", country: "Germany" },
+  { university: "Hochschulen Fresenius", country: "Germany" },
   {
-    university: "De Montfort University",
-    country: "uk",
+    university: "IU International University of Applied Sciences",
+    country: "Germany",
   },
+  { university: "International School of Management", country: "Germany" },
+  { university: "Lancaster University", country: "Germany" },
   {
-    university: "University of New Brunswick",
-    country: "canada",
+    university: "Northern Institute of Technology Management",
+    country: "Germany",
   },
+  { university: "Schiller International University", country: "Germany" },
   {
-    university: "Auburn University",
-    country: "usa",
-  },
-  {
-    university: "University of Hertfordshire",
-    country: "uk",
-  },
-  {
-    university: "Queen’s University",
-    country: "canada",
-  },
-  {
-    university: "Arkansas State University",
-    country: "usa",
-  },
-  {
-    university: "University College Birmingham",
-    country: "uk",
-  },
-  {
-    university: "University of Prince Edward Island",
-    country: "canada",
-  },
-  {
-    university: "University of Arizona",
-    country: "usa",
-  },
-  {
-    university: "Teesside University",
-    country: "uk",
-  },
-  {
-    university: "Windsor University",
-    country: "canada",
-  },
-  {
-    university: "University of Illinois",
-    country: "usa",
-  },
-  {
-    university: "Coventry University",
-    country: "uk",
-  },
-  {
-    university: "Wilfrid Laurier University",
-    country: "canada",
-  },
-  {
-    university: "Sault College",
-    country: "canada",
-  },
-  {
-    university: "Washington State University",
-    country: "usa",
-  },
-  {
-    university: "Leeds Trinity University",
-    country: "uk",
+    university: "University of Europe for Applied Sciences",
+    country: "Germany",
   },
 
-  {
-    university: "University Of Saskatchewan",
-    country: "canada",
-  },
-  {
-    university: "Centennial College",
-    country: "canada",
-  },
-  {
-    university: "Louisiana State University",
-    country: "usa",
-  },
-  {
-    university: "University of Guelph",
-    country: "canada",
-  },
-  {
-    university: "Murray State University",
-    country: "usa",
-  },
-  {
-    university: "Algonquin College",
-    country: "canada",
-  },
-  {
-    university: "University Of Lethbridge",
-    country: "canada",
-  },
-  {
-    university: "Thompson Rivers University",
-    country: "canada",
-  },
-  {
-    university: "Humber College",
-    country: "canada",
-  },
-  {
-    university: "Florida International University",
-    country: "usa",
-  },
-  {
-    university: "University of Manitoba",
-    country: "canada",
-  },
-  {
-    university: "Trine University",
-    country: "usa",
-  },
-  {
-    university: "Fleming College",
-    country: "canada",
-  },
-  {
-    university: "Kent State University",
-    country: "usa",
-  },
-  {
-    university: "Conestoga College",
-    country: "canada",
-  },
-  {
-    university: "New Brunswick community College",
-    country: "canada",
-  },
+  // Ireland
+  { university: "Dublin Business School", country: "Ireland" },
+  { university: "Dublin City University", country: "Ireland" },
+  { university: "Maynooth University", country: "Ireland" },
+  { university: "Trinity College Dublin", country: "Ireland" },
+  { university: "University College Cork", country: "Ireland" },
+  { university: "University of Limerick", country: "Ireland" },
+
+  // UK
+  { university: "Coventry University", country: "UK" },
+  { university: "De Montfort University", country: "UK" },
+  { university: "Leeds Trinity University", country: "UK" },
+  { university: "Teesside University", country: "UK" },
+  { university: "University College Birmingham", country: "UK" },
+  { university: "University of Hertfordshire", country: "UK" },
+
+  // USA
+  { university: "Arkansas State University", country: "USA" },
+  { university: "Auburn University", country: "USA" },
+  { university: "Florida International University", country: "USA" },
+  { university: "Kent State University", country: "USA" },
+  { university: "Louisiana State University", country: "USA" },
+  { university: "Murray State University", country: "USA" },
+  { university: "Trine University", country: "USA" },
+  { university: "University of Arizona", country: "USA" },
+  { university: "University of Illinois", country: "USA" },
+  { university: "University of Washington", country: "USA" },
+  { university: "Washington State University", country: "USA" },
 ];
 
 //FOOTER
@@ -280,6 +231,37 @@ export const canadaColleges = [
   "partner/centennial-college",
   "partner/sault-college",
   // "partner/humber-college",
+];
+
+export const australiaUniversities = [
+  "partner/deakin-university",
+  "partner/federation-university",
+  "partner/griffith-university",
+  "partner/kaplan-business-school",
+  "partner/la-trobe-university",
+  "partner/the-university-of-notre-dame",
+  "partner/torrens-university",
+  "partner/western-sydney-university",
+];
+
+export const germanyUniversities = [
+  "partner/gisma-university-of-applied-sciences",
+  "partner/hochschulen-fresenius",
+  "partner/iu-international-university-of-applied-sciences",
+  // "partner/international-school-of-management",
+  "partner/lancaster-university",
+  "partner/northern-institute-of-technology-management",
+  // "partner/schiller-international-university",
+  "partner/university-of-europe-for-applied-sciences",
+];
+
+export const irelandUniversities = [
+  "partner/dublin-business-school",
+  "partner/dublin-city-university",
+  "partner/maynooth-university",
+  "partner/trinity-college-dublin",
+  // "partner/university-college-cork",
+  "partner/university-of-limerick",
 ];
 
 //ID

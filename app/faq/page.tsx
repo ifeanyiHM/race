@@ -66,9 +66,9 @@ function Page() {
   }, []);
 
   return (
-    <div>
+    <>
       {" "}
-      <div className="relative pt-[47%] md:pt-[25%] bg-fixed bg-cover bg-center bg-gradient-to-r from-[#5a3d3d] via-[#222222] to-[#0f1412]">
+      <header className="relative pt-[47%] md:pt-[25%] bg-fixed bg-cover bg-center bg-gradient-to-r from-[#5a3d3d] via-[#222222] to-[#0f1412]">
         <BlurImage src={`/faq.png`} alt="partner hero background" fill />
         <div className="w-full xl:w-auto absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white">
           <h1
@@ -77,8 +77,8 @@ function Page() {
             Frequently asked questions
           </h1>
         </div>
-      </div>
-      <div className="w-[90%] md:w-[80%] lg:w-[65%] xl:w-[58%] mx-auto my-10 md:mt-20 md:mb-32">
+      </header>
+      <section className="w-[90%] md:w-[80%] lg:w-[65%] xl:w-[58%] mx-auto my-10 md:mt-20 md:mb-32">
         <div className="relative w-full">
           <ul className="w-full mt-2 overflow-hidden space-y-6">
             {faqs.map(({ question, answer }, index) => (
@@ -108,8 +108,8 @@ function Page() {
             ))}
           </ul>
         </div>
-      </div>
-    </div>
+      </section>
+    </>
   );
 }
 

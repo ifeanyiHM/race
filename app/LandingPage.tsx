@@ -4,11 +4,10 @@ import Link from "next/link";
 import { useState } from "react";
 import { HiAcademicCap } from "react-icons/hi";
 import { LiaLongArrowAltRightSolid } from "react-icons/lia";
-import BlurImage from "../components/BlurImage";
+import { CountriesSwiper } from "../components/carousel/CountriesSwiperjs";
 import SwiperSlider from "../components/carousel/SwiperSlider";
 import { formattedItem } from "../utils/FormatString";
 import {
-  countries,
   partners,
   programs,
   services,
@@ -20,9 +19,9 @@ function LandingPage() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <div>
+    <>
       {/* Hero section */}
-      <div
+      <header
         className="relative pt-[60%] md:pt-[45%] w-full bg-fixed bg-cover bg-center"
         style={{
           backgroundImage:
@@ -44,10 +43,10 @@ function LandingPage() {
             Start Application
           </button>
         </div>
-      </div>
+      </header>
 
       {/* featured universities */}
-      <div className="pt-14 md:pt-20 md:pb-20 text-center">
+      <section className="pt-14 md:pt-20 md:pb-20 text-center">
         <h2 className="text-2xl md:text-4xl font-bold text-[#185397]">
           Featured University
         </h2>
@@ -58,14 +57,14 @@ function LandingPage() {
         <div className="md:w-[80%] xl:w-[70%] mx-3 md:mx-auto">
           <SwiperSlider imageList={universityLogo} imageType="svg" />
         </div>
-      </div>
+      </section>
 
       {/* services */}
-      <div id="services" className="pt-20 md:pt-24 pb-20 md:pb-20">
+      <section id="services" className="pt-20 md:pt-24 pb-20 md:pb-20">
         <h2 className="text-2xl md:text-4xl text-center font-bold text-[#185397]">
           Our Services
         </h2>
-        <ul className="w-[90%] lg:w-[70%] xl:w-[70%] mx-auto mt-6 md:mt-[5.563rem] grid grid-cols-2 gap-3 md:gap-8 items-stretch text-[#333333]">
+        <ul className="w-[90%] lg:w-[91%] mx-auto mt-6 md:mt-[5.563rem] grid grid-cols-2 md:grid-cols-3 gap-2 items-stretch text-[#333333]">
           {services.map(
             ({ name, color, paragraph1, paragraph2, list }, index) => (
               <li key={name}>
@@ -73,10 +72,10 @@ function LandingPage() {
                   onClick={() =>
                     setOpenIndex(openIndex === index ? null : index)
                   }
-                  className="arrow rounded-md md:rounded-2xl p-3 md:py-6 md:px-10 min-[1500px]:px-[2.75rem] h-full flex"
+                  className="arrow p-3 md:py-6 md:px-10 min-[1500px]:px-[2.75rem] h-full flex"
                   style={{ backgroundColor: color }}
                 >
-                  <div className="h-full flex flex-col justify-between gap-10 md:gap-20 lg:gap-28">
+                  <div className="h-full flex flex-col justify-between gap-10 md:gap-16 lg:gap-28 xl:gap-32">
                     <div className="space-y-5">
                       <Image
                         src={`/icon/service${index + 1}.svg`}
@@ -165,49 +164,31 @@ function LandingPage() {
             )
           )}
         </ul>
-      </div>
+      </section>
 
       {/* Countries */}
-      <div id="study destinations" className="pt-20 md:pt-24 pb-20 md:pb-44">
-        <h2 className="text-2xl md:text-4xl text-center font-bold text-[#185397]">
+      <section
+        id="study destinations"
+        className="pt-20 md:pt-24 pb-20 md:pb-44"
+      >
+        <h2 className="text-2xl md:text-4xl text-center font-bold text-[#185397] mb-6 md:mb-8">
           Countries We Cover
         </h2>
-        <ul className="w-[90%] lg:w-[80%] xl:w-[70%] mx-auto mt-6 md:mt-[5.563rem] grid grid-cols-2 gap-3 md:gap-8">
-          {countries.map((country, index) => (
-            <li key={country} className="text-center w-full">
-              <Link href={country.toLowerCase()} className="space-y-3">
-                {" "}
-                <div className="relative overflow-hidden group rounded-md md:rounded-xl lg:rounded-2xl w-full">
-                  <BlurImage
-                    src={`/country${index + 1}.png`}
-                    alt={country}
-                    width={550}
-                    height={376}
-                    classname="shadow-[inset_25px_35px_35px_rgba(0,0,0,0.5)] w-full"
-                  />
-                  <div className="absolute inset-0 group-hover:shadow-[inset_0_25px_35px_rgba(0,0,0,0.2)] rounded-md md:rounded-xl lg:rounded-2xl"></div>
-                </div>
-                <p className="text-sm md:text-base lg:text-xl font-semibold text-[#333333]">
-                  Study in {country}
-                </p>
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </div>
+        <CountriesSwiper />
+      </section>
 
       {/* Partners */}
-      <div className="md:pb-20 text-center">
+      <section className="md:pb-20 text-center">
         <h2 className="text-2xl md:text-4xl font-bold text-[#185397]">
           Partners
         </h2>
         <div className="md:w-[80%] xl:w-[70%] mx-3 md:mx-auto">
           <SwiperSlider imageList={partners} imageType="svg" />
         </div>
-      </div>
+      </section>
 
       {/* Programs */}
-      <div id="programs" className="pt-20 md:pt-24 pb-20 md:pb-44">
+      <section id="programs" className="pt-20 md:pt-24 pb-20 md:pb-44">
         <h2 className="text-2xl md:text-4xl font-bold text-[#185397] text-center">
           Programs
         </h2>
@@ -234,8 +215,8 @@ function LandingPage() {
             </li>
           ))}
         </ul>
-      </div>
-    </div>
+      </section>
+    </>
   );
 }
 
