@@ -4,11 +4,12 @@ import Link from "next/link";
 import { useState } from "react";
 import { HiAcademicCap } from "react-icons/hi";
 import { LiaLongArrowAltRightSolid } from "react-icons/lia";
+import BlurImage from "../components/BlurImage";
 import { CountriesSwiper } from "../components/carousel/CountriesSwiperjs";
 import SwiperSlider from "../components/carousel/SwiperSlider";
 import { formattedItem } from "../utils/FormatString";
 import {
-  partners,
+  allInstitutions,
   programs,
   services,
   universityLogo,
@@ -64,7 +65,7 @@ function LandingPage() {
         <h2 className="text-2xl md:text-4xl text-center font-bold text-[#185397]">
           Our Services
         </h2>
-        <ul className="w-[90%] lg:w-[91%] mx-auto mt-6 md:mt-[5.563rem] grid grid-cols-2 md:grid-cols-3 gap-2 items-stretch text-[#333333]">
+        <ul className="w-[90%] lg:w-[93%] xxl:w-[90%] mx-auto mt-6 md:mt-[5.563rem] grid grid-cols-2 md:grid-cols-3 gap-2 items-stretch text-[#333333]">
           {services.map(
             ({ name, color, paragraph1, paragraph2, list }, index) => (
               <li key={name}>
@@ -178,12 +179,58 @@ function LandingPage() {
       </section>
 
       {/* Partners */}
-      <section className="md:pb-20 text-center">
-        <h2 className="text-2xl md:text-4xl font-bold text-[#185397]">
+      <section className="md:pb-20 mt-6 md:mt-[5.563rem]">
+        <h2 className="text-2xl md:text-4xl font-bold text-[#185397] mb-5 text-center">
           Partners
         </h2>
-        <div className="md:w-[80%] xl:w-[70%] mx-3 md:mx-auto">
-          <SwiperSlider imageList={partners} imageType="svg" />
+        <div
+          className="relative w-full py-10 md:py-20 bg-fixed bg-cover"
+          style={{
+            backgroundImage: "url('/partners-bg.png')",
+            backgroundColor: "rgba(30, 41, 59, 0.9)",
+            backdropFilter: "blur(50px)",
+          }}
+        >
+          <div className="relative w-[90%] lg:w-[93%] xxl:w-[90%] mx-auto">
+            <ul className="grid grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-1 items-stretch text-[#333333]">
+              {allInstitutions.map((partner, index) => (
+                <li
+                  key={index}
+                  className={`bg-gray-200 flex items-center justify-center
+                ${index === 0 ? "rounded-tl-lg" : ""} 
+                ${index === 7 ? "rounded-tr-lg" : ""} 
+                ${index === 32 ? "rounded-bl-lg" : ""} 
+                ${index === 39 ? "rounded-br-lg" : ""}
+                ${
+                  [
+                    1, 4, 5, 6, 8, 9, 11, 12, 13, 14, 15, 16, 17, 18, 19, 21,
+                    24, 27, 28, 30, 33, 35, 37, 38,
+                  ].includes(index)
+                    ? "hidden md:flex"
+                    : ""
+                }
+                ${[1, 6, 37, 38].includes(index) ? "md:hidden lg:flex" : ""}
+                `}
+                >
+                  <div className="w-[100px] h-[70px] md:h-[100px] flex items-center justify-center">
+                    <BlurImage
+                      src={`/partner/${partner}.png`}
+                      alt={partner}
+                      width={100}
+                      height={100}
+                      classname="full"
+                    />
+                  </div>
+                </li>
+              ))}
+            </ul>
+            <Link
+              href="/partners"
+              className="absolute -bottom-7 md:-bottom-10 right-2 md:text-xl text-white font-medium hover:underline"
+            >
+              See More
+            </Link>
+          </div>
         </div>
       </section>
 

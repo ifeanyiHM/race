@@ -8,6 +8,9 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        xxl: "1440px", // Custom screen size
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

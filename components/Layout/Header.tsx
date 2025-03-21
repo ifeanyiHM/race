@@ -57,7 +57,7 @@ function Header({ classname }: HeaderProps) {
   return (
     <nav className="sticky top-0 z-10 w-full md:shadow-md">
       <div className={`${classname} w-full bg-[#185397] py-2`}>
-        <div className="flex justify-between items-center text-white text-xs md:text-sm font-medium px-2 md:px-0 md:w-[95%] lg:w-[93%] mx-auto">
+        <div className="flex justify-between items-center text-white text-xs md:text-sm font-medium px-2 md:px-0 md:w-[95%] lg:w-[93%] xxl:w-[90%] mx-auto">
           <p>
             Email:{" "}
             <Link href="mailto:info@raceeduconsult.com">
@@ -104,7 +104,7 @@ function Header({ classname }: HeaderProps) {
         </div>
       </div>
       <div className="bg-white">
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between w-full md:w-[95%] lg:w-[93%] mx-auto">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between w-full md:w-[95%] lg:w-[93%] xxl:w-[90%] mx-auto">
           <div className="flex justify-between items-center shadow-md md:shadow-none md:block  px-2 md:px-0">
             <div className="w-[70px] h-[70px] lg:w-[80px] lg:h-[75px] bg-cover flex items-center justify-center">
               <Link href="/">
@@ -182,7 +182,7 @@ function Header({ classname }: HeaderProps) {
 
           {/* desktop menu */}
           <ul className="hidden md:flex gap-1 lg:gap-2">
-            {menuList.map((menu) => {
+            {menuList.map((menu, index) => {
               const sectionId = menu.name.toLowerCase();
               const isInternalScroll =
                 sectionId === "programs" ||
@@ -222,7 +222,11 @@ function Header({ classname }: HeaderProps) {
                     }}
                     className={`${
                       isActive ? "border-[#185397]" : "border-transparent"
-                    } p-2 md:py-0 md:px-1 lg:px-1.5 md:mx-1 border-l-2 hover:border-[#185397] font-medium text-[#185397] text-sm lg:text-base`}
+                    } ${
+                      index === menuList.length - 1
+                        ? "md:pl-1 md:pr-0 lg:pl-1.5 lg:pr-0 md:ml-1 lg:mr-0"
+                        : "md:px-1 lg:px-1.5 md:mx-1"
+                    } p-2 md:py-0 border-l-2 hover:border-[#185397] font-medium text-[#185397] text-sm lg:text-base`}
                   >
                     {menu.name}
                   </Link>
