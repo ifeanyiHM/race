@@ -115,7 +115,7 @@ export const partner = [
   { university: "University of Manitoba", country: "Canada" },
   { university: "University of New Brunswick", country: "Canada" },
   { university: "University of Prince Edward Island", country: "Canada" },
-  { university: "University of Saskatchewan", country: "Canada" },
+  { university: "University of Saskatchewann", country: "Canada" },
   { university: "Wilfrid Laurier University", country: "Canada" },
   { university: "Windsor University", country: "Canada" },
 
@@ -357,7 +357,7 @@ export const allInstitutions = [
   "kent-state-university",
   "new-brunswick-community-college",
   "griffith-university",
-  "university-of-saskatchewan",
+  "university-of-saskatchewann",
   "sault-college",
   "the-university-of-notre-dame",
   "queens-university",
