@@ -154,7 +154,7 @@ function Page() {
 
                   <div className="w-8 h-3.5 md:w-auto md:h-auto">
                     <BlurImage
-                      src={`/partner/flag-of-${p.country}.png`}
+                      src={`/partner/flag-of-${p.country.toLowerCase()}.png`}
                       alt={`flag of ${p.country}`}
                       width={51}
                       height={21}
