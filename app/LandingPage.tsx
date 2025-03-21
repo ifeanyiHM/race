@@ -214,7 +214,7 @@ function LandingPage() {
                 >
                   <div className="w-[100px] h-[70px] md:h-[100px] flex items-center justify-center">
                     <BlurImage
-                      src={`/partner/${partner}.png`}
+                      src={`/partner/${partner.toLowerCase()}.png`}
                       alt={partner}
                       width={100}
                       height={100}
