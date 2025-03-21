@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌍 Race Educational Services
 
-## Getting Started
+**Your Gateway to Global Education** 🎓✈️  
 
-First, run the development server:
+Race Educational Services is dedicated to helping students achieve their dream of studying abroad. We provide expert guidance, university placement, visa assistance, and career counseling to ensure a smooth journey to top-ranked institutions worldwide.  
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+✅ **Program & University Selection** – Find the best program and university based on your goals.  
+✅ **Free Educational Counseling** – Get expert advice on studying abroad.  
+✅ **University Placement & Enrollment** – Secure admission to top institutions.  
+✅ **Career Guidance** – Plan your future with informed career counseling.  
+✅ **Visa Assistance** – Navigate the visa process with ease.  
+✅ **Pre-Departure Support** – Prepare for your study-abroad journey.  
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🌎 Study Destinations
 
-To learn more about Next.js, take a look at the following resources:
+We help students gain admission to universities in:  
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+🇺🇸 **USA** | 🇨🇦 **Canada** | 🇬🇧 **UK** | 🇮🇪 **Ireland** | 🇦🇺 **Australia** | 🇩🇪 **Germany**  
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🏫 Partner Universities
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+We collaborate with over **250+ top institutions** worldwide, including:  
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 🇺🇸 USA
+- University of Arizona  
+- Auburn University  
+- Kent State University  
+
+### 🇨🇦 Canada
+- University of New Brunswick  
+- Wilfrid Laurier University  
+
+### 🇬🇧 UK
+- Coventry University  
+- Teesside University  
+
+### 🇦🇺 Australia
+- Deakin University  
+- Griffith University  
+
+### 🇩🇪 Germany
+- IU International University of Applied Sciences  
+
+### 🇮🇪 Ireland
+- Trinity College Dublin  
+- Dublin City University  
+
+---
+
+## 📚 Available Programs
+
+We offer a wide range of academic programs across multiple disciplines:  
+
+🎓 **Engineering** – Computer, Mechanical, Civil, Biomedical  
+📈 **Business** – Business Administration, Analytics, Entrepreneurship  
+🎨 **Arts** – Film & Media, Interior Design, Fashion, Photography  
+🩺 **Health Sciences** – Public Health, Neuroscience, Nutrition  
+
+
+
