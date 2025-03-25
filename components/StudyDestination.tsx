@@ -51,7 +51,7 @@ function StudyDestination({
       {colleges && (
         <div className="pb-20 md:pb-28 lg:pb-36 text-center">
           <h2 className="text-xl md:text-4xl mb-1 font-bold text-[#185397]">
-            Partners Colleges in Canada
+            Partner Colleges in Canada
           </h2>
           <div className="md:w-[80%] xl:w-[70%] mx-3 md:mx-auto mt-2.5 md:mt-5">
             <SwiperSlider imageList={colleges} imageType="png" />
