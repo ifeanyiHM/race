@@ -41,7 +41,7 @@ function LandingPage() {
             from making your dream come true.
           </p>
           <button className="w-44 md:w-56 min-[1500px]:w-[21.9rem] py-2 lg:py-3 min-[1500px]:py-[1.125rem] bg-[#FFB14C] rounded-[2rem] font-bold text-xs md:text-sm lg:text-base">
-            Start Application
+            <Link href='/contact'>Start Application</Link>
           </button>
         </div>
       </header>
